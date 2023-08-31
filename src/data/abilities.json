@@ -1,0 +1,3382 @@
+{
+  "attack": [
+    {
+      "ability": "Backhand",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "60%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": [
+        "Strike the target with the back of the hand.",
+        "20%-100% ability damage.",
+        "Stun target for 1.2s."
+      ],
+      "image": "Backhand.png",
+      "skill": "attack",
+      "id": 0
+    },
+    {
+      "ability": "Lesser Havoc",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "72%",
+      "cooldown": "10.2",
+      "equipment": "Dual wield",
+      "description": ["Strike at the target with both weapons.", "24%-120% ability damage."],
+      "image": "Lesser_Havoc.png",
+      "skill": "attack",
+      "id": 1
+    },
+    {
+      "ability": "Lesser Sever",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "86%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": ["Strike at the targets vitals.", "28%-144% ability damage."],
+      "image": "Lesser_Sever.png",
+      "skill": "attack",
+      "id": 2
+    },
+    {
+      "ability": "Lesser Smash",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "72%",
+      "cooldown": "10.2",
+      "equipment": "Two-handed",
+      "description": ["Deliver a powerful blow to the target.", "24%-120% ability damage."],
+      "image": "Lesser_Smash.png",
+      "skill": "attack",
+      "id": 3
+    },
+    {
+      "ability": "Slice",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "95%",
+      "cooldown": "3",
+      "equipment": "Any",
+      "description": [
+        "Slice at the target's weak points.",
+        "75%-115% ability damage.",
+        "If the target is bound or stunned, damage is increased by 40%."
+      ],
+      "image": "Slice.png",
+      "skill": "attack",
+      "id": 4
+    },
+    {
+      "ability": "Slaughter",
+      "members": false,
+      "level": 1,
+      "type": "Threshold",
+      "target": "Single",
+      "damage": "145%",
+      "cooldown": "30",
+      "equipment": "Any",
+      "description": [
+        "Stab the target, causing them to bleed.",
+        "20%-50% ability damage every 1.2s over 6s.",
+        "Damage over time.",
+        "Deal 3x damage if the target moves."
+      ],
+      "image": "Slaughter.png",
+      "skill": "attack",
+      "id": 5
+    },
+    {
+      "ability": "Overpower",
+      "members": false,
+      "level": 2,
+      "type": "Ultimate",
+      "target": "Single",
+      "damage": "300%",
+      "cooldown": "30",
+      "equipment": "Any",
+      "description": [
+        "Strike the target with a massive overhead swing.",
+        "200-400% ability damage."
+      ],
+      "image": "Overpower.png",
+      "skill": "attack",
+      "id": 6
+    },
+    {
+      "ability": "Overpower",
+      "members": false,
+      "level": 2,
+      "type": "Ultimate",
+      "target": "Single",
+      "damage": "600%",
+      "cooldown": "30",
+      "equipment": "Igneous Kal-Ket or Igneous Kal-Zuk",
+      "description": [
+        "Strike the target with a massive overhead swing.",
+        "Hits twice.",
+        "Each hit deals 200-400% ability damage."
+      ],
+      "image": "Overpower.png",
+      "skill": "attack",
+      "id": 7
+    },
+    {
+      "ability": "Havoc",
+      "members": false,
+      "level": 5,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "94.2%",
+      "cooldown": "10.2",
+      "equipment": "Dual wield",
+      "description": [
+        "Strike at the target with both weapons.",
+        "31.4-157% ability damage.",
+        "Disable protection prayers on target in PvP."
+      ],
+      "image": "Havoc.png",
+      "skill": "attack",
+      "id": 8
+    },
+    {
+      "ability": "Forceful Backhand",
+      "members": false,
+      "level": 15,
+      "type": "Threshold",
+      "target": "Single",
+      "damage": "120%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": [
+        "Slam the target with the back of the hand.",
+        "40%-200% ability damage.",
+        "Stun target for 3.6s."
+      ],
+      "image": "Forceful_Backhand.png",
+      "skill": "attack",
+      "id": 9
+    },
+    {
+      "ability": "Smash",
+      "members": false,
+      "level": 20,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "94.2%",
+      "cooldown": "10.2",
+      "equipment": "Two-handed",
+      "description": [
+        "Deliver a powerful blow to the target.",
+        "31.4-157% ability damage.",
+        "Disable protection prayers on target in PvP."
+      ],
+      "image": "Smash.png",
+      "skill": "attack",
+      "id": 10
+    },
+    {
+      "ability": "Barge",
+      "members": false,
+      "level": 30,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "75%",
+      "cooldown": "20.4",
+      "equipment": "Any",
+      "description": [
+        "Run up and ram the target.",
+        "25%-125% ability damage.",
+        "Instantly move within 1 tile of target.",
+        "Clear bound status.",
+        "Bind the target for 6.6s."
+      ],
+      "image": "Barge.png",
+      "skill": "attack",
+      "id": 11
+    },
+    {
+      "ability": "Greater Barge",
+      "members": false,
+      "level": 30,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "75%",
+      "cooldown": "20.4",
+      "equipment": "Any",
+      "description": [
+        "Run up and ram the target.",
+        "25%-125% ability damage.",
+        "Instantly move within 1 tile of target.",
+        "Gain 2-10% damage for every 0.6s since your last attack. (Damage range caps at 6s: 45%-225% ability damage)",
+        "If it has been 4.8s since your last attack, gain an additional bonus which will turn your next channeled[sic] ability into a damage over time attack.",
+        "Clear bound status.",
+        "Bind the target for 6.6s."
+      ],
+      "image": "Greater_Barge.png",
+      "skill": "attack",
+      "id": 12
+    },
+    {
+      "ability": "Flurry",
+      "members": false,
+      "level": 37,
+      "type": "Threshold",
+      "target": "Area",
+      "damage": "225.6%",
+      "cooldown": "20.4",
+      "equipment": "Dual wield",
+      "description": [
+        "Swing both weapons rapidly around you.",
+        "75%-376% total ability damage over 3.6s in 4 hits.",
+        "Channeled[sic] attack.",
+        "Damages a single target and up to 8 additional adjacent targets."
+      ],
+      "image": "Flurry.png",
+      "skill": "attack",
+      "id": 13
+    },
+    {
+      "ability": "Greater Flurry",
+      "members": false,
+      "level": 37,
+      "type": "Threshold",
+      "target": "Area",
+      "damage": "376.8%",
+      "cooldown": "20.4",
+      "equipment": "Dual wield",
+      "description": [
+        "Swing both weapons rapidly around you.",
+        "75%-376% total ability damage over 3.6s in 4 hits.",
+        "If you strike a single target deal 125%-628% total ability damage instead.",
+        "Channeled[sic] attack.",
+        "For every successful hit, gain 1.2s cooldown reduction from Berserk, up to a maximum of 4.8s.",
+        "Damages a single target and up to 8 additional adjacent targets."
+      ],
+      "image": "Greater_Flurry.png",
+      "skill": "attack",
+      "id": 14
+    },
+    {
+      "ability": "Sever",
+      "members": false,
+      "level": 45,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "112.8%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": [
+        "Strike at the targets vitals.",
+        "37%-188% ability damage.",
+        "Target deals 10% less damage for 4.8s."
+      ],
+      "image": "Sever.png",
+      "skill": "attack",
+      "id": 15
+    },
+    {
+      "ability": "Hurricane",
+      "members": false,
+      "level": 55,
+      "type": "Threshold",
+      "target": "Area",
+      "damage": "265%",
+      "cooldown": "20.4",
+      "equipment": "Two-handed",
+      "description": [
+        "Spin on the spot with your weapon.",
+        "66-219% ability damage.",
+        "Secondary attack of 84-161% ability damage to primary target.",
+        "Damage up to 8 additional adjacent targets."
+      ],
+      "image": "Hurricane.png",
+      "skill": "attack",
+      "id": 16
+    },
+    {
+      "ability": "Bladed Dive",
+      "members": false,
+      "level": 65,
+      "type": "Basic",
+      "target": "Area",
+      "damage": "75%",
+      "cooldown": "20.4",
+      "equipment": "Dual wield",
+      "description": [
+        "Dash forward striking the enemies around you.",
+        "25%-125% ability damage.",
+        "Instantly move to selected tile.",
+        "Cooldown is reset if any enemies it hit die within 6s.",
+        "Damages up to 9 targets adjacent to destination.",
+        "Revolution mode will not trigger this ability.",
+        "Max 10 tile range."
+      ],
+      "image": "Bladed_Dive.png",
+      "skill": "attack",
+      "id": 17
+    },
+    {
+      "ability": "Massacre",
+      "members": false,
+      "level": 66,
+      "type": "Ultimate",
+      "target": "Single",
+      "damage": "426.1%",
+      "cooldown": "60",
+      "equipment": "Dual wield",
+      "description": [
+        "Swing both weapons at the target causing them to bleed.",
+        "37.6-188% initial ability damage.",
+        "Followed by 62.6% ability damage every 1.2s over 6s.",
+        "Damage over time."
+      ],
+      "image": "Massacre.png",
+      "skill": "attack",
+      "id": 18
+    },
+    {
+      "ability": "Blood Tendrils",
+      "members": false,
+      "level": 75,
+      "type": "Threshold",
+      "target": "Single",
+      "damage": "324%",
+      "cooldown": "45",
+      "equipment": "Any",
+      "description": [
+        "Summon tendrils to attack the target.",
+        "18%-90% ability damage every 1.2s for 6s.",
+        "Initial hit is twice as strong.",
+        "Damage yourself for 27% of the damage dealt after the initial hit."
+      ],
+      "image": "Blood_Tendrils.png",
+      "skill": "attack",
+      "id": 19
+    },
+    {
+      "ability": "Meteor Strike",
+      "members": false,
+      "level": 81,
+      "type": "Ultimate",
+      "target": "Area",
+      "damage": "300%",
+      "cooldown": "60",
+      "equipment": "Two-handed",
+      "description": [
+        "Jump up and strike the ground.",
+        "250%-350% ability damage.",
+        "Damage the primary target and up to 8 enemies adjacent to the primary target.",
+        "Critical strikes generate 10% extra adrenaline for 30s."
+      ],
+      "image": "Meteor_Strike.png",
+      "skill": "attack",
+      "id": 20
+    },
+    {
+      "ability": "Balanced Strike",
+      "members": false,
+      "level": 85,
+      "type": "Ultimate",
+      "target": "Single",
+      "damage": "Varies",
+      "cooldown": "120",
+      "equipment": "Any",
+      "description": [
+        "Attack with the power of Guthix.",
+        "Target or user with the higher percentage remaining lifepoints will be dealt damage equivalent to the percent difference of user's maximum lifepoints.",
+        "The other will be healed for 50% of the damage dealt."
+      ],
+      "image": "Balanced_Strike.png",
+      "skill": "attack",
+      "id": 21
+    }
+  ],
+  "strength": [
+    {
+      "ability": "Lesser Dismember",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "106.7%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": [
+        "Slice at the target causing them to bleed.",
+        "20%-28% ability damage every 1.2s over 6s.",
+        "Damage over time."
+      ],
+      "image": "Lesser_Dismember.png",
+      "skill": "strength",
+      "id": 0
+    },
+    {
+      "ability": "Kick",
+      "members": false,
+      "level": 3,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "60%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": [
+        "Kick the target causing them to stumble.",
+        "20%-100% ability damage.",
+        "Stun target for 1.2s.",
+        "Knock smaller targets back 1 tile."
+      ],
+      "image": "Kick.png",
+      "skill": "strength",
+      "id": 1
+    },
+    {
+      "ability": "Stomp",
+      "members": false,
+      "level": 3,
+      "type": "Threshold",
+      "target": "Single",
+      "damage": "120%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": [
+        "Kick the target causing them to stumble.",
+        "40%-200% ability damage.",
+        "Stun target for 3.6s.",
+        "Knock smaller targets back 1 tile."
+      ],
+      "image": "Stomp_ability.png",
+      "skill": "strength",
+      "id": 2
+    },
+    {
+      "ability": "Punish",
+      "members": false,
+      "level": 8,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "75%",
+      "cooldown": "24",
+      "equipment": "Any",
+      "description": [
+        "Slash at the target unexpectedly.",
+        "50%-100% ability damage.",
+        "If the target is below 50% health, damage is increased by 150%."
+      ],
+      "image": "Punish.png",
+      "skill": "strength",
+      "id": 3
+    },
+    {
+      "ability": "Dismember",
+      "members": false,
+      "level": 14,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "120.6%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": [
+        "Slice at the target causing them to bleed.",
+        "20%-37% ability damage every 1.2s over 6s.",
+        "Damage over time."
+      ],
+      "image": "Dismember.png",
+      "skill": "strength",
+      "id": 4
+    },
+    {
+      "ability": "Fury",
+      "members": false,
+      "level": 24,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "147.6%",
+      "cooldown": "5.4",
+      "equipment": "Any",
+      "description": [
+        "Swing your weapon at the target multiple times.",
+        "48%-246% total ability damage over 2.4s in 3 hits.",
+        "Channeled[sic] attack.",
+        "For every hit channeled[sic], gain 5% critical strike chance on your next ability."
+      ],
+      "image": "Fury.png",
+      "skill": "strength",
+      "id": 5
+    },
+    {
+      "ability": "Greater Fury",
+      "members": false,
+      "level": 24,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "94.2%",
+      "cooldown": "5.4",
+      "equipment": "Any",
+      "description": [
+        "Strike at the target with rage.",
+        "31%-157% ability damage.",
+        "Gain 10% increased critical strike chance on next ability.",
+        "Gain 100% critical strike chance on your next ability if Greater Fury critical strikes."
+      ],
+      "image": "Greater_Fury.png",
+      "skill": "strength",
+      "id": 6
+    },
+    {
+      "ability": "Destroy",
+      "members": false,
+      "level": 37,
+      "type": "Threshold",
+      "target": "Single",
+      "damage": "451.2%",
+      "cooldown": "20.4",
+      "equipment": "Dual wield",
+      "description": [
+        "Ferociously attack with both weapons.",
+        "148%-752% total ability damage over 4.2s in 4 hits.",
+        "Channeled[sic] attack.",
+        "Stun the target for 3.6s."
+      ],
+      "image": "Destroy_ability.png",
+      "skill": "strength",
+      "id": 7
+    },
+    {
+      "ability": "Quake",
+      "members": false,
+      "level": 37,
+      "type": "Threshold",
+      "target": "Area",
+      "damage": "131.4%",
+      "cooldown": "20.4",
+      "equipment": "Two-handed",
+      "description": [
+        "Slam the ground with your weapon.",
+        "43%-219% ability damage to the primary target.",
+        "37%-188% ability damage to up to 8 enemies adjacent to the primary target.",
+        "Reduce damaged targets' defence by 5%.",
+        "Increase base hit chance on damaged targets by 2%."
+      ],
+      "image": "Quake.png",
+      "skill": "strength",
+      "id": 8
+    },
+    {
+      "ability": "Berserk",
+      "members": false,
+      "level": 42,
+      "type": "Ultimate",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "60",
+      "equipment": "Any",
+      "description": [
+        "Go berserk, empowering yourself.",
+        "Increase melee damage by 100%.",
+        "Increase all damage taken by 50%.",
+        "19.8s duration."
+      ],
+      "image": "Berserk.png",
+      "skill": "strength",
+      "id": 9
+    },
+    {
+      "ability": "Cleave",
+      "members": false,
+      "level": 48,
+      "type": "Basic",
+      "target": "Area",
+      "damage": "112.8%",
+      "cooldown": "7.2",
+      "equipment": "Two-handed",
+      "description": [
+        "Swipe your weapon in front of you.",
+        "37.6-188% ability damage.",
+        "Damage up to 9 targets in a cone in front of you."
+      ],
+      "image": "Cleave.png",
+      "skill": "strength",
+      "id": 10
+    },
+    {
+      "ability": "Assault",
+      "members": false,
+      "level": 55,
+      "type": "Threshold",
+      "target": "Single",
+      "damage": "525.6%",
+      "cooldown": "30",
+      "equipment": "Any",
+      "description": [
+        "Strike at the target multiple times.",
+        "172%-876% total ability damage over 5.4s in 4 hits.",
+        "Channeled[sic] attack."
+      ],
+      "image": "Assault.png",
+      "skill": "strength",
+      "id": 11
+    },
+    {
+      "ability": "Decimate",
+      "members": false,
+      "level": 67,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "112.8%",
+      "cooldown": "7.2",
+      "equipment": "Dual wield",
+      "description": [
+        "Strike at the target with both weapons.",
+        "37%-188% ability damage.",
+        "48%-244% ability damage if target is another player wielding a shield."
+      ],
+      "image": "Decimate.png",
+      "skill": "strength",
+      "id": 12
+    },
+    {
+      "ability": "Pulverise",
+      "members": false,
+      "level": 81,
+      "type": "Ultimate",
+      "target": "Single",
+      "damage": "300%",
+      "cooldown": "60",
+      "equipment": "Two-handed",
+      "description": [
+        "Charge up a massive strike and pulverise the target.",
+        "250%-350% ability damage.",
+        "Reduce the damage dealt by the target by 25% for 30s.",
+        "If an NPC is defeated with Pulverise you gain 50% adrenaline."
+      ],
+      "image": "Pulverise.png",
+      "skill": "strength",
+      "id": 13
+    },
+    {
+      "ability": "Frenzy",
+      "members": false,
+      "level": 86,
+      "type": "Ultimate",
+      "target": "Single",
+      "damage": "610%",
+      "cooldown": "60",
+      "equipment": "Dual wield",
+      "description": [
+        "Swing your weapons in a frenzy.",
+        "380%-840% total ability damage over 4.8s in 4 hits.",
+        "Channeled[sic] attack."
+      ],
+      "image": "Frenzy.png",
+      "skill": "strength",
+      "id": 14
+    },
+    {
+      "ability": "Chaos Roar",
+      "members": false,
+      "level": 92,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "75%",
+      "cooldown": "60",
+      "equipment": "Any",
+      "description": [
+        "Release a savage war cry, empowering your next strike.",
+        "20%-130% ability damage.",
+        "Increase the base ability damage of your next melee ability to hit by 100%.",
+        "7.2s duration.",
+        "50% effectiveness in PvP."
+      ],
+      "image": "Chaos_Roar.png",
+      "skill": "strength",
+      "id": 15
+    }
+  ],
+  "ranged": [
+    {
+      "ability": "Binding Shot",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "60%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": [
+        "Fire a binding shot.",
+        "20%-100% ability damage.",
+        "Stun target for 1.2s.",
+        "Bind target for 9.6s."
+      ],
+      "image": "Binding_Shot.png",
+      "skill": "ranged",
+      "id": 0
+    },
+    {
+      "ability": "Lesser Dazing Shot",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "70%",
+      "cooldown": "5.4",
+      "equipment": "Two-handed",
+      "description": ["Shoot an arrow that detonates on contact.", "20%-120% ability damage."],
+      "image": "Lesser_Dazing_Shot.png",
+      "skill": "ranged",
+      "id": 1
+    },
+    {
+      "ability": "Lesser Fragmentation Shot",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "106.7%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": [
+        "Fire a shot which fragments on impact, causing the target to bleed.",
+        "20%-28% ability damage every 1.2s over 6s.",
+        "Damage over time."
+      ],
+      "image": "Lesser_Fragmentation_Shot.png",
+      "skill": "ranged",
+      "id": 2
+    },
+    {
+      "ability": "Lesser Needle Strike",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "70%",
+      "cooldown": "5.4",
+      "equipment": "Dual wield",
+      "description": ["Launch painful needles at the target.", "20%-120% ability damage."],
+      "image": "Lesser_Needle_Strike.png",
+      "skill": "ranged",
+      "id": 3
+    },
+    {
+      "ability": "Lesser Snipe",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "148.5%",
+      "cooldown": "10.2",
+      "equipment": "Any",
+      "description": [
+        "Fire a precise shot.",
+        "125%-172% ability damage after 1.8s.",
+        "Channeled[sic] attack."
+      ],
+      "image": "Lesser_Snipe.png",
+      "skill": "ranged",
+      "id": 4
+    },
+    {
+      "ability": "Piercing Shot",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "90%",
+      "cooldown": "3",
+      "equipment": "Any",
+      "description": [
+        "Shoot the target twice.",
+        "Hits twice.",
+        "Each hit deals 35%-55% ability damage.",
+        "If the target is bound or stunned, damage is increased by 30%."
+      ],
+      "image": "Piercing_Shot.png",
+      "skill": "ranged",
+      "id": 5
+    },
+    {
+      "ability": "Quiver ammo slot 1",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "0",
+      "equipment": "Pernix's quiver",
+      "description": ["Select the ammo in slot 1 of your quiver."],
+      "image": "Quiver_ammo_slot_1.png",
+      "skill": "ranged",
+      "id": 6
+    },
+    {
+      "ability": "Quiver ammo slot 2",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "0",
+      "equipment": "Pernix's quiver",
+      "description": ["Select the ammo in slot 2 of your quiver."],
+      "image": "Quiver_ammo_slot_2.png",
+      "skill": "ranged",
+      "id": 7
+    },
+    {
+      "ability": "Snap Shot",
+      "members": false,
+      "level": 0,
+      "type": "Threshold",
+      "target": "Single",
+      "damage": "265%",
+      "cooldown": "20.4",
+      "equipment": "Any",
+      "description": [
+        "Fire two shots in quick succession.",
+        "100%-120% ability damage on the first shot.",
+        "Secondary shot of 100%-210% ability damage."
+      ],
+      "image": "Snap_Shot.png",
+      "skill": "ranged",
+      "id": 8
+    },
+    {
+      "ability": "Deadshot",
+      "members": false,
+      "level": 2,
+      "type": "Ultimate",
+      "target": "Single",
+      "damage": "425.8%",
+      "cooldown": "30",
+      "equipment": "Any",
+      "description": [
+        "Fire a deadly shot at the target, causing them to bleed.",
+        "37.6-188% initial ability damage.",
+        "Followed by 62.7% ability damage every 1.2s over 6s.",
+        "Damage over time."
+      ],
+      "image": "Deadshot.png",
+      "skill": "ranged",
+      "id": 9
+    },
+    {
+      "ability": "Deadshot",
+      "members": false,
+      "level": 2,
+      "type": "Ultimate",
+      "target": "Single",
+      "damage": "476%",
+      "cooldown": "30",
+      "equipment": "Igneous Kal-Xil or Igneous Kal-Zuk",
+      "description": [
+        "Fire a deadly shot at the target, causing them to bleed.",
+        "42-210% initial ability damage.",
+        "Followed by 70% ability damage every 1.2s over 6s.",
+        "Damage over time."
+      ],
+      "image": "Deadshot.png",
+      "skill": "ranged",
+      "id": 10
+    },
+    {
+      "ability": "Tight Bindings",
+      "members": false,
+      "level": 3,
+      "type": "Threshold",
+      "target": "Single",
+      "damage": "120%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": [
+        "Fire a shot with strong binds.",
+        "40%-200% ability damage.",
+        "Stun target for 3.6s.",
+        "Bind target for 9.6s."
+      ],
+      "image": "Tight_Bindings.png",
+      "skill": "ranged",
+      "id": 11
+    },
+    {
+      "ability": "Snipe",
+      "members": false,
+      "level": 5,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "172%",
+      "cooldown": "10.2",
+      "equipment": "Any",
+      "description": [
+        "Fire a precise shot.",
+        "125-219% ability damage after 1.8s.",
+        "Channeled[sic] attack.",
+        "Disable protection prayers on target in PvP."
+      ],
+      "image": "Snipe.png",
+      "skill": "ranged",
+      "id": 12
+    },
+    {
+      "ability": "Dazing Shot",
+      "members": false,
+      "level": 8,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "94.2%",
+      "cooldown": "5.4",
+      "equipment": "Two-handed",
+      "description": [
+        "Shoot an arrow that detonates on contact.",
+        "31%-157% ability damage.",
+        "Target suffers a 10% decrease to accuracy on their next attack."
+      ],
+      "image": "Dazing_Shot.png",
+      "skill": "ranged",
+      "id": 13
+    },
+    {
+      "ability": "Greater Dazing Shot",
+      "members": false,
+      "level": 8,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "100.8%",
+      "cooldown": "5.4",
+      "equipment": "Two-handed",
+      "description": [
+        "Shoot an arrow that detonates on contact.",
+        "31%-157% ability damage.",
+        "Target suffers a 10% decrease to accuracy on their next attack.",
+        "Apply a stack of puncture to the target that deals 8%-10% ability damage every 1.8s for 9s[sic].",
+        "Puncture can stack up to 10 times, with each stack resetting the duration."
+      ],
+      "image": "Greater_Dazing_Shot.png",
+      "skill": "ranged",
+      "id": 14
+    },
+    {
+      "ability": "Demoralise",
+      "members": false,
+      "level": 10,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "60%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": [
+        "Intimidate the target.",
+        "20%-100% ability damage.",
+        "Stun target for 1.2s.",
+        "Knock small targets back 1 tile."
+      ],
+      "image": "Demoralise.png",
+      "skill": "ranged",
+      "id": 15
+    },
+    {
+      "ability": "Needle Strike",
+      "members": false,
+      "level": 12,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "94.2%",
+      "cooldown": "5.4",
+      "equipment": "Dual wield",
+      "description": [
+        "Launch painful needles at the target.",
+        "31%-157% ability damage.",
+        "Gain 7% damage increase to target on your next attack."
+      ],
+      "image": "Needle_Strike.png",
+      "skill": "ranged",
+      "id": 16
+    },
+    {
+      "ability": "Rout",
+      "members": false,
+      "level": 15,
+      "type": "Threshold",
+      "target": "Single",
+      "damage": "120%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": [
+        "Severely intimidate the target.",
+        "40%-200% ability damage.",
+        "Stun target for 3.6s.",
+        "Knock small targets back 1 tile."
+      ],
+      "image": "Rout.png",
+      "skill": "ranged",
+      "id": 17
+    },
+    {
+      "ability": "Fragmentation Shot",
+      "members": false,
+      "level": 20,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "120.6%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": [
+        "Fire a shot which fragments on impact, causing the target to bleed.",
+        "20%-37% ability damage every 1.2s over 6s.",
+        "Damage over time.",
+        "Deal 2x damage if target moves."
+      ],
+      "image": "Fragmentation_Shot.png",
+      "skill": "ranged",
+      "id": 18
+    },
+    {
+      "ability": "Rapid Fire",
+      "members": false,
+      "level": 37,
+      "type": "Threshold",
+      "target": "Single",
+      "damage": "451.2%",
+      "cooldown": "20.4",
+      "equipment": "Any",
+      "description": [
+        "Rapidly fire at the target.",
+        "150%-752% total ability damage over 4.8s in 8 hits.",
+        "Channeled[sic] attack.",
+        "Bind target for 6s."
+      ],
+      "image": "Rapid_Fire.png",
+      "skill": "ranged",
+      "id": 19
+    },
+    {
+      "ability": "Greater Ricochet",
+      "members": false,
+      "level": 45,
+      "type": "Basic",
+      "target": "Multi",
+      "damage": "120%",
+      "cooldown": "10.2",
+      "equipment": "Any",
+      "description": [
+        "Fire a shot which ricochets off the target.",
+        "20%-100% ability damage.",
+        "Damage up to 2 additional targets.",
+        "The primary target will be hit for an additional 10%-50% ability damage for each ricochet shot that cannot find an additional target."
+      ],
+      "image": "Greater_Ricochet.png",
+      "skill": "ranged",
+      "id": 20
+    },
+    {
+      "ability": "Ricochet",
+      "members": false,
+      "level": 45,
+      "type": "Basic",
+      "target": "Multi",
+      "damage": "60%",
+      "cooldown": "10.2",
+      "equipment": "Any",
+      "description": [
+        "Fire a shot which ricochets off the target.",
+        "20%-100% ability damage.",
+        "Damage up to 2 additional targets."
+      ],
+      "image": "Ricochet.png",
+      "skill": "ranged",
+      "id": 21
+    },
+    {
+      "ability": "Bombardment",
+      "members": false,
+      "level": 55,
+      "type": "Threshold",
+      "target": "Area",
+      "damage": "131.4%",
+      "cooldown": "30",
+      "equipment": "Any",
+      "description": [
+        "Fire a volley of shots into the air, which come raining down.",
+        "43%-219% ability damage.",
+        "Damage the primary target and up to 8 enemies adjacent to the primary target."
+      ],
+      "image": "Bombardment.png",
+      "skill": "ranged",
+      "id": 22
+    },
+    {
+      "ability": "Salt the Wound",
+      "members": false,
+      "level": 65,
+      "type": "Threshold",
+      "target": "Single",
+      "damage": "112.8%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": [
+        "Perform a coup de gr\u00e2ce.",
+        "37%-188% ability damage.",
+        "Deal an additional 18% ability damage[sic] for each stack of puncture on target.",
+        "Resets the duration of the puncture on target.",
+        "Does not remove any stacks of puncture from target."
+      ],
+      "image": "Salt_the_Wound.png",
+      "skill": "ranged",
+      "id": 23
+    },
+    {
+      "ability": "Incendiary Shot",
+      "members": false,
+      "level": 66,
+      "type": "Ultimate",
+      "target": "Area",
+      "damage": "300%",
+      "cooldown": "60",
+      "equipment": "Two-handed",
+      "description": [
+        "Fire an explosive shot at the target.",
+        "250%-350% ability damage after 3s.",
+        "Damage the primary target and up to 8 enemies adjacent to the primary target.",
+        "Critical strikes generate 10% extra adrenaline for 30s."
+      ],
+      "image": "Incendiary_Shot.png",
+      "skill": "ranged",
+      "id": 24
+    },
+    {
+      "ability": "Corruption Shot",
+      "members": false,
+      "level": 70,
+      "type": "Basic",
+      "target": "Multi",
+      "damage": "200%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": [
+        "Corrupts the target, causing them to take damage over time.",
+        "33%-100% ability damage every 1.2s over 6s.",
+        "Damage over time.",
+        "Every 1.2s damage spreads to nearby enemies and is reduced by 20% of the initial damage.",
+        "Damage will only spread to active opponents in PvP."
+      ],
+      "image": "Corruption_Shot.png",
+      "skill": "ranged",
+      "id": 25
+    },
+    {
+      "ability": "Shadow Tendrils",
+      "members": false,
+      "level": 75,
+      "type": "Threshold",
+      "target": "Single",
+      "damage": "274.2%",
+      "cooldown": "45",
+      "equipment": "Any",
+      "description": [
+        "Shadow tendrils whip at your feet, before striking the target.",
+        "66%-500% ability damage to target.",
+        "33%-250% total ability damage to you over 2-5 hits."
+      ],
+      "image": "Shadow_Tendrils.png",
+      "skill": "ranged",
+      "id": 26
+    },
+    {
+      "ability": "Unload",
+      "members": false,
+      "level": 81,
+      "type": "Ultimate",
+      "target": "Single",
+      "damage": "610%",
+      "cooldown": "60",
+      "equipment": "Dual wield",
+      "description": [
+        "Unload both your weapons at the target's current location.",
+        "380%-840% total ability damage over 4.8s seconds in 4 hits.",
+        "Channeled[sic] attack."
+      ],
+      "image": "Unload.png",
+      "skill": "ranged",
+      "id": 27
+    },
+    {
+      "ability": "Death's Swiftness",
+      "members": false,
+      "level": 85,
+      "type": "Ultimate",
+      "target": "Single",
+      "damage": "255%",
+      "cooldown": "60",
+      "equipment": "Any",
+      "description": [
+        "Create a shroud of death at your location.",
+        "While in the shroud, ranged damage is increased by 50%.",
+        "Deal 10%-20% ability damage to the target while it is in the shroud every 1.8s.",
+        "30s duration."
+      ],
+      "image": "Deaths_Swiftness.png",
+      "skill": "ranged",
+      "id": 28
+    },
+    {
+      "ability": "Greater Death's Swiftness",
+      "members": false,
+      "level": 85,
+      "type": "Ultimate",
+      "target": "Single",
+      "damage": "315%",
+      "cooldown": "60",
+      "equipment": "Any",
+      "description": [
+        "Create a shroud of death at your location.",
+        "While in the shroud, ranged damage is increased by 50%.",
+        "Deal 10%-20% ability damage to the target while it is in the shroud every 1.8s.",
+        "38s duration."
+      ],
+      "image": "Greater_Deaths_Swiftness.png",
+      "skill": "ranged",
+      "id": 29
+    }
+  ],
+  "magic": [
+    {
+      "ability": "Asphyxiate",
+      "members": false,
+      "level": 0,
+      "type": "Threshold",
+      "target": "Single",
+      "damage": "451.2%",
+      "cooldown": "20.4",
+      "equipment": "Any",
+      "description": [
+        "Reach out with magical force and choke the target.",
+        "150%-752% total ability damage over 4.2s in 4 hits.",
+        "Channeled[sic] attack.",
+        "Stun target for 3.6s."
+      ],
+      "image": "Asphyxiate.png",
+      "skill": "magic",
+      "id": 0
+    },
+    {
+      "ability": "Impact",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "60%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": [
+        "Blast the target with a burst of magical energy.",
+        "20%-100% ability damage.",
+        "Stun and bind target for 1.2s."
+      ],
+      "image": "Impact.png",
+      "skill": "magic",
+      "id": 1
+    },
+    {
+      "ability": "Lesser Combust",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "106.7%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": [
+        "Explode the target, causing them to burn.",
+        "20%-28% ability damage every 1.2s over 6s.",
+        "Damage over time."
+      ],
+      "image": "Lesser_Combust.png",
+      "skill": "magic",
+      "id": 2
+    },
+    {
+      "ability": "Lesser Concentrated Blast",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "108%",
+      "cooldown": "5.4",
+      "equipment": "Dual wield",
+      "description": [
+        "Blast the target with beams of concentrated energy.",
+        "36%-180% total ability damage over 2.4s in 3 hits.",
+        "Channeled[sic] attack."
+      ],
+      "image": "Lesser_Concentrated_Blast.png",
+      "skill": "magic",
+      "id": 3
+    },
+    {
+      "ability": "Lesser Dragon Breath",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Area",
+      "damage": "86%",
+      "cooldown": "10.2",
+      "equipment": "Any",
+      "description": [
+        "Breathe a mighty cloud of fire in a line.",
+        "28%-144% ability damage.",
+        "Damage up to 4 enemies between you and the primary target."
+      ],
+      "image": "Lesser_Dragon_Breath.png",
+      "skill": "magic",
+      "id": 4
+    },
+    {
+      "ability": "Lesser Sonic Wave",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "72%",
+      "cooldown": "5.4",
+      "equipment": "Two-handed",
+      "description": [
+        "A focused blast of magic that pummels the target.",
+        "24%-120% ability damage."
+      ],
+      "image": "Lesser_Sonic_Wave.png",
+      "skill": "magic",
+      "id": 5
+    },
+    {
+      "ability": "Wrack",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "90%",
+      "cooldown": "3",
+      "equipment": "Any",
+      "description": [
+        "A strong unpredictable attack.",
+        "40%-140% ability damage.",
+        "If the target is bound or stunned, damage is increased by 30%."
+      ],
+      "image": "Wrack.png",
+      "skill": "magic",
+      "id": 6
+    },
+    {
+      "ability": "Wrack and Ruin",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "180%",
+      "cooldown": "3",
+      "equipment": "Any",
+      "description": [
+        "Tear at the target with blood magic.",
+        "60-300% ability damage.",
+        "Instead if target is bound or stunned deal 120-360% ability damage.",
+        "Extends the duration of the next Combust cast by 2 hits. (Within 10s)",
+        "Reverts back to Wrack on use.",
+        "Consumes all stacks of Blood Tithe."
+      ],
+      "image": "Wrack_and_Ruin.png",
+      "skill": "magic",
+      "id": 7
+    },
+    {
+      "ability": "Omnipower",
+      "members": false,
+      "level": 2,
+      "type": "Ultimate",
+      "target": "Single",
+      "damage": "300%",
+      "cooldown": "30",
+      "equipment": "Any",
+      "description": [
+        "Bombard the target with each of the four elements.",
+        "200%-400% ability damage."
+      ],
+      "image": "Omnipower.png",
+      "skill": "magic",
+      "id": 8
+    },
+    {
+      "ability": "Omnipower",
+      "members": false,
+      "level": 2,
+      "type": "Ultimate",
+      "target": "Single",
+      "damage": "540%",
+      "cooldown": "30",
+      "equipment": "Igneous Kal-Mej or Igneous Kal-Zuk",
+      "description": [
+        "Bombard the target with each of the four elements.",
+        "Hits 4 times.",
+        "Each hit deals 90%-180% ability damage."
+      ],
+      "image": "Omnipower.png",
+      "skill": "magic",
+      "id": 9
+    },
+    {
+      "ability": "Deep Impact",
+      "members": false,
+      "level": 3,
+      "type": "Threshold",
+      "target": "Single",
+      "damage": "120%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": [
+        "Blast the target with a comet of strong magical energy.",
+        "40%-200% ability damage.",
+        "Stun and bind target for 3.6s."
+      ],
+      "image": "Deep_Impact.png",
+      "skill": "magic",
+      "id": 10
+    },
+    {
+      "ability": "Dragon Breath",
+      "members": false,
+      "level": 5,
+      "type": "Basic",
+      "target": "Area",
+      "damage": "112.8%",
+      "cooldown": "10.2",
+      "equipment": "Any",
+      "description": [
+        "Breathe a mighty cloud of fire.",
+        "37.6-188% ability damage",
+        "Damage up to 4 enemies between you and the primary target, and adjacent to the primary target",
+        "Disable protection prayers in PvP"
+      ],
+      "image": "Dragon_Breath.png",
+      "skill": "magic",
+      "id": 11
+    },
+    {
+      "ability": "Sonic Wave",
+      "members": false,
+      "level": 8,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "94.2%",
+      "cooldown": "5.4",
+      "equipment": "Two-handed",
+      "description": [
+        "A focused blast of magic that pummels the target.",
+        "31%-157% ability damage.",
+        "On-hit: gain 6 stacks of flow for 3s.",
+        "Flow",
+        "Increases your hit chance by 1% per stack."
+      ],
+      "image": "Sonic_Wave.png",
+      "skill": "magic",
+      "id": 12
+    },
+    {
+      "ability": "Shock",
+      "members": false,
+      "level": 10,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "60%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": [
+        "Scream at the target.",
+        "20%-100% ability damage.",
+        "Stun target for 1.2s.",
+        "Knock small targets back 1 tile."
+      ],
+      "image": "Shock.png",
+      "skill": "magic",
+      "id": 13
+    },
+    {
+      "ability": "Concentrated Blast",
+      "members": false,
+      "level": 12,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "147.6%",
+      "cooldown": "5.4",
+      "equipment": "Dual wield",
+      "description": [
+        "Blast the target with beams of concentrated energy.",
+        "48%-246% total ability damage over 2.4s in 3 hits.",
+        "Channeled[sic] attack.",
+        "For every hit channeled[sic], gain 5% critical strike chance on your next ability."
+      ],
+      "image": "Concentrated_Blast.png",
+      "skill": "magic",
+      "id": 14
+    },
+    {
+      "ability": "Greater Concentrated Blast",
+      "members": false,
+      "level": 12,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "160.2%",
+      "cooldown": "5.4",
+      "equipment": "Dual wield",
+      "description": [
+        "Blast the target with beams of concentrated energy.",
+        "53%-267% total ability damage over 1.8s in 3 hits.",
+        "Channeled[sic] attack.",
+        "For every hit channeled[sic], gain 5% critical strike chance on your next ability."
+      ],
+      "image": "Greater_Concentrated_Blast.png",
+      "skill": "magic",
+      "id": 15
+    },
+    {
+      "ability": "Horror",
+      "members": false,
+      "level": 15,
+      "type": "Threshold",
+      "target": "Single",
+      "damage": "120%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": [
+        "Terrify the target.",
+        "40%-200% ability damage.",
+        "Stun target for 3.6s.",
+        "Knock small targets back 1 tile."
+      ],
+      "image": "Horror.png",
+      "skill": "magic",
+      "id": 16
+    },
+    {
+      "ability": "Combust",
+      "members": false,
+      "level": 20,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "120.6%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": [
+        "Explode the target, causing them to burn.",
+        "20%-37% ability damage every 1.2s over 6s.",
+        "Damage over time.",
+        "Deal 2x damage if target moves."
+      ],
+      "image": "Combust.png",
+      "skill": "magic",
+      "id": 17
+    },
+    {
+      "ability": "Detonate",
+      "members": false,
+      "level": 37,
+      "type": "Threshold",
+      "target": "Area",
+      "damage": "225%",
+      "cooldown": "30",
+      "equipment": "Any",
+      "description": [
+        "Summon an explosive ball of energy over the target, or yourself.",
+        "Charge 20%-70% ability damage every 0.6s over 3s for a maximum of 100%-350% damage.",
+        "Detonate the ball by using Detonate again.",
+        "If the ball has been charged for at least 3s deal all charged damage to the primary target and up to 25 enemies adjacent to the primary target.",
+        "Otherwise deal all charged damage to the primary target and up to 9 enemies adjacent to the primary target, with a slightly reduced blast radius.",
+        "Revolution will not trigger this ability."
+      ],
+      "image": "Detonate.png",
+      "skill": "magic",
+      "id": 18
+    },
+    {
+      "ability": "Chain",
+      "members": false,
+      "level": 45,
+      "type": "Basic",
+      "target": "Multi",
+      "damage": "60%",
+      "cooldown": "10.2",
+      "equipment": "Any",
+      "description": [
+        "A magical spell that chains between nearby targets.",
+        "20%-100% ability damage.",
+        "Damage up to 2 additional targets."
+      ],
+      "image": "Chain.png",
+      "skill": "magic",
+      "id": 19
+    },
+    {
+      "ability": "Greater Chain",
+      "members": false,
+      "level": 45,
+      "type": "Basic",
+      "target": "Multi",
+      "damage": "60%",
+      "cooldown": "10.2",
+      "equipment": "Any",
+      "description": [
+        "A magical spell that chains between nearby targets.",
+        "20%-100% ability damage.",
+        "Damage up to 2 additional targets.",
+        "The next ability on the primary target is also cast on the additional targets with a 50% damage reduction.",
+        "6s duration."
+      ],
+      "image": "Greater_Chain.png",
+      "skill": "magic",
+      "id": 20
+    },
+    {
+      "ability": "Golden Touch",
+      "members": false,
+      "level": 55,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "120",
+      "equipment": "None",
+      "description": [
+        "Feel the magic of gold at your fingertips.",
+        "High-alchemises all drops not exceeding the lootbeam value.",
+        "60s duration.",
+        "Revolution will not trigger this ability.",
+        "Generates no adrenaline."
+      ],
+      "image": "Golden_Touch.png",
+      "skill": "magic",
+      "id": 21
+    },
+    {
+      "ability": "Wild Magic",
+      "members": false,
+      "level": 55,
+      "type": "Threshold",
+      "target": "Single",
+      "damage": "265%",
+      "cooldown": "20.4",
+      "equipment": "Any",
+      "description": [
+        "Fire an unpredictable double magical attack at the target.",
+        "Hits twice.",
+        "Each hit deals 50%-215% ability damage."
+      ],
+      "image": "Wild_Magic.png",
+      "skill": "magic",
+      "id": 22
+    },
+    {
+      "ability": "Magma Tempest",
+      "members": false,
+      "level": 66,
+      "type": "Basic",
+      "target": "Area",
+      "damage": "96%",
+      "cooldown": "15",
+      "equipment": "Two-handed",
+      "description": [
+        "Create a storm of fire and earth.Create a 5x5 damaging area centered at a target or selected tile.",
+        "5%-19% ability damage every 1.2s over 9.6s.",
+        "Damages up to 25 targets in the area.",
+        "This ability cannot critically strike."
+      ],
+      "image": "Magma_Tempest.png",
+      "skill": "magic",
+      "id": 23
+    },
+    {
+      "ability": "Magma Tempest (Targeted)",
+      "members": false,
+      "level": 66,
+      "type": "Basic",
+      "target": "Area",
+      "damage": "96%",
+      "cooldown": "15",
+      "equipment": "Two-handed",
+      "description": [
+        "Create a storm of fire and earth.Create a 5x5 damaging area centered at a target or selected tile.",
+        "5%-19% ability damage every 1.2s over 9.6s.",
+        "Damages up to 25 targets in the area.",
+        "This ability cannot critically strike.",
+        "Revolution mode will not trigger this ability."
+      ],
+      "image": "Magma_Tempest_Targeted.png",
+      "skill": "magic",
+      "id": 24
+    },
+    {
+      "ability": "Metamorphosis",
+      "members": false,
+      "level": 66,
+      "type": "Ultimate",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "60",
+      "equipment": "Any",
+      "description": [
+        "Transform into an elemental based on your most recently cast spell.",
+        "Spells consume no runes when cast.",
+        "Magic damage is increased by 62% (31% in PvP).",
+        "15s duration."
+      ],
+      "image": "Metamorphosis.png",
+      "skill": "magic",
+      "id": 25
+    },
+    {
+      "ability": "Corruption Blast",
+      "members": false,
+      "level": 70,
+      "type": "Basic",
+      "target": "Multi",
+      "damage": "200%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": [
+        "Blasts the target with corruption, causing them to take damage over time.",
+        "33%-100% ability damage every 1.2s over 6s.",
+        "Damage over time.",
+        "Every 1.2s damage spreads to nearby enemies and is reduced by 20% of the initial damage.",
+        "Damage will only spread to active opponents in PvP."
+      ],
+      "image": "Corruption_Blast.png",
+      "skill": "magic",
+      "id": 26
+    },
+    {
+      "ability": "Greater Sonic Wave",
+      "members": false,
+      "level": 75,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "115%",
+      "cooldown": "5.4",
+      "equipment": "Two-handed",
+      "description": [
+        "A focused blast of magic that pummels the target and leaves behind residual energy.",
+        "60%-170% ability damage.",
+        "On-hit: gain 8 stacks of Flow for 4.2 seconds.",
+        "Flow",
+        "Increases your hit chance by 1% per stack.",
+        "Increases your base ability damage by 1% per stack."
+      ],
+      "image": "Greater_Sonic_Wave.png",
+      "skill": "magic",
+      "id": 27
+    },
+    {
+      "ability": "Smoke Tendrils",
+      "members": false,
+      "level": 75,
+      "type": "Threshold",
+      "target": "Single",
+      "damage": "345%",
+      "cooldown": "45",
+      "equipment": "Any",
+      "description": [
+        "Tendrils of smoke whip at the target's feet.",
+        "115%-575% total ability damage to the target over 6s in 4 hits.",
+        "35%-175% total ability damage to you over 6s in 3 hits.",
+        "Each hit from this ability is treated as a critical strike.",
+        "Channeled[sic] attack."
+      ],
+      "image": "Smoke_Tendrils.png",
+      "skill": "magic",
+      "id": 28
+    },
+    {
+      "ability": "Tsunami",
+      "members": false,
+      "level": 81,
+      "type": "Ultimate",
+      "target": "Area",
+      "damage": "250%",
+      "cooldown": "60",
+      "equipment": "Any",
+      "description": [
+        "Summon forth a destructive wall of water.",
+        "200-300% ability damage.",
+        "Damage your primary target and the first 9 targets in a wave in front of you.",
+        "Critical strikes generate 10% extra adrenaline for 30s."
+      ],
+      "image": "Tsunami.png",
+      "skill": "magic",
+      "id": 29
+    },
+    {
+      "ability": "Greater Sunshine",
+      "members": false,
+      "level": 85,
+      "type": "Ultimate",
+      "target": "Single",
+      "damage": "315%",
+      "cooldown": "60",
+      "equipment": "Any",
+      "description": [
+        "Summon a sunbeam to shine over your location.",
+        "While in the beam, magic damage is increased by 50%.",
+        "Deal 10%-20% ability damage to the target while it is in the beam every 1.8s.",
+        "38s duration."
+      ],
+      "image": "Greater_Sunshine.png",
+      "skill": "magic",
+      "id": 30
+    },
+    {
+      "ability": "Sunshine",
+      "members": false,
+      "level": 85,
+      "type": "Ultimate",
+      "target": "Single",
+      "damage": "255%",
+      "cooldown": "60",
+      "equipment": "Any",
+      "description": [
+        "Summon a sunbeam to shine over your location.",
+        "While in the beam, magic damage is increased by 50%.",
+        "Deal 10%-20% ability damage to the target while it is in the beam every 1.8s.",
+        "30s duration."
+      ],
+      "image": "Sunshine.png",
+      "skill": "magic",
+      "id": 31
+    }
+  ],
+  "necromancy": [
+    {
+      "ability": "Necromancy",
+      "members": false,
+      "level": 1,
+      "type": "Basic attack",
+      "adrenaline": "9",
+      "target": "Single",
+      "damage": "100%",
+      "cooldown": "0",
+      "equipment": "Any",
+      "description": [
+        "Attack the target",
+        "X-Y (90%-110%) necromancy damage.",
+        "Generates 9% Adrenaline.",
+        "Automatically triggered during combat."
+      ],
+      "image": "Necromancy_ability.png",
+      "skill": "necromancy",
+      "id": 0
+    },
+    {
+      "ability": "Conjure Skeleton Warrior",
+      "members": false,
+      "level": 2,
+      "type": "Other",
+      "adrenaline": "0",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "",
+      "equipment": "Conduit, 1 ectoplasm",
+      "description": [
+        "Conjure a Skeleton Warrior from the Underworld.",
+        "X-Y (27%-33%) necromancy spirit damage every 3s.",
+        "42s duration.",
+        "Spirit.",
+        "Skeleton Warrior",
+        "Filled with uncontrollable anger.",
+        "Generates 1 Rage stack with each attack.",
+        "Deals an additional X (1%) damage for each Rage stack."
+      ],
+      "image": "Conjure_Skeleton_Warrior.png",
+      "skill": "necromancy",
+      "id": 1
+    },
+    {
+      "ability": "Finger of Death",
+      "members": false,
+      "level": 8,
+      "type": "Other",
+      "adrenaline": "-0-60",
+      "target": "Single",
+      "damage": "300%",
+      "cooldown": "0",
+      "equipment": "Any",
+      "description": [
+        "Inflict searing pain on the target.",
+        "X-Y (270%-330%) necromancy damage.",
+        "Adrenaline cost reduced by 10% for each Necrosis stack.",
+        "Consumes up to 6 Necrosis stacks."
+      ],
+      "image": "Finger_of_Death.png",
+      "skill": "necromancy",
+      "id": 2
+    },
+    {
+      "ability": "Touch of Death",
+      "members": false,
+      "level": 13,
+      "type": "Basic",
+      "adrenaline": "9",
+      "target": "Single",
+      "damage": "100%",
+      "cooldown": "14.4",
+      "equipment": "Any",
+      "description": [
+        "Touch the target with a hand of Death.",
+        "X-Y (90%-110%) necromancy damage.",
+        "Generates 4 Necrosis stacks.",
+        "Generates 9% Adrenaline."
+      ],
+      "image": "Touch_of_Death.png",
+      "skill": "necromancy",
+      "id": 3
+    },
+    {
+      "ability": "Command Skeleton Warrior",
+      "members": false,
+      "level": 20,
+      "type": "Other",
+      "adrenaline": "0",
+      "target": "Single",
+      "damage": "284%",
+      "cooldown": "15",
+      "equipment": "Conduit",
+      "description": [
+        "Command the Skeleton Warrior to unleash its inner rage.",
+        "27-33% necromancy spirit damage per hit every 1.2s.",
+        "2 hits",
+        "6s duration"
+      ],
+      "image": "Command_Skeleton_Warrior.png",
+      "skill": "necromancy",
+      "id": 4
+    },
+    {
+      "ability": "Death Skulls",
+      "members": false,
+      "level": 28,
+      "type": "Ultimate",
+      "adrenaline": "-100",
+      "target": "Multi",
+      "damage": "250%-750%",
+      "cooldown": "60",
+      "equipment": "Any",
+      "description": [
+        "Launch a flurry of skulls at the target.",
+        "X-Y (225-275%) necromancy damage per hit.",
+        "Bounces between yourself and enemies within 5 tiles up to 4 times (disabled in PvP)",
+        "Prioritises enemies with higher maximum life points, then yourself."
+      ],
+      "image": "Death_Skulls.png",
+      "skill": "necromancy",
+      "id": 5
+    },
+    {
+      "ability": "Death Skulls",
+      "members": false,
+      "level": 28,
+      "type": "Ultimate",
+      "adrenaline": "-60",
+      "target": "Multi",
+      "damage": "250%-1000%",
+      "cooldown": "60",
+      "equipment": "Igneous Kal-Mor or Igneous Kal-Zuk",
+      "description": [
+        "Launch a flurry of skulls at the target.",
+        "X-Y (225-275%) necromancy damage per hit.",
+        "Bounces between yourself and enemies within 5 tiles up to 6 times (disabled in PvP)",
+        "Prioritises enemies with higher maximum life points, then yourself."
+      ],
+      "image": "Death_Skulls.png",
+      "skill": "necromancy",
+      "id": 6
+    },
+    {
+      "ability": "Blood Siphon",
+      "members": false,
+      "level": 36,
+      "type": "Other",
+      "adrenaline": "0",
+      "target": "Area",
+      "damage": "130%",
+      "cooldown": "45",
+      "equipment": "Any",
+      "description": [
+        "Siphon blood from enemies before releasing a powerful attack on your target.",
+        "X-Y (22%-28%) necromancy damage per hit every 1.2s to enemies within 2 tiles of you.",
+        "4 hits.",
+        "Channeled[sic] attack.",
+        "Heal for 70% of the damage dealt.",
+        "Completing the channel deals 100% of the total heal value plus X-Y (117%-143%) necromancy damage to the target."
+      ],
+      "image": "Blood_Siphon.png",
+      "skill": "necromancy",
+      "id": 7
+    },
+    {
+      "ability": "Conjure Putrid Zombie",
+      "members": false,
+      "level": 40,
+      "type": "Other",
+      "adrenaline": "-50",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "30",
+      "equipment": "Conduit, 1 ectoplasm",
+      "description": [
+        "Conjure a Putrid Zombie from the Underworld.",
+        "X-Y (18%-22%) necromancy spirit damage every 3.6s.",
+        "45s duration.",
+        "Spirit",
+        "Putrid Zombie",
+        "Emits a fetid stench.",
+        "X-Y (27-33%) poison damage every 1.8s to enemies within 1 tile."
+      ],
+      "image": "Conjure_Putrid_Zombie.png",
+      "skill": "necromancy",
+      "id": 8
+    },
+    {
+      "ability": "Conjure Vengeful Ghost",
+      "members": false,
+      "level": 40,
+      "type": "Other",
+      "adrenaline": "-30",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "",
+      "equipment": "Conduit, 1 ectoplasm",
+      "description": [
+        "Conjure a Vengeful Ghost from the Underworld.",
+        "X-Y (18%-22%) necromancy spirit damage every 4.2s.",
+        "30s duration.",
+        "Spirit.",
+        "Vengeful Ghost",
+        "Drains the vigour of enemies.",
+        "Heal for 175% of the damage dealt by the Vengeful Ghost."
+      ],
+      "image": "Conjure_Vengeful_Ghost.png",
+      "skill": "necromancy",
+      "id": 9
+    },
+    {
+      "ability": "Bloat",
+      "members": false,
+      "level": 48,
+      "type": "Other",
+      "adrenaline": "-20",
+      "target": "Single",
+      "damage": "187.5%-525%",
+      "cooldown": "0",
+      "equipment": "Any",
+      "description": [
+        "Bloat the target, causing them to take damage over time.",
+        "X-Y (135%-165%) necromancy damage.",
+        "Applies Bloated to the target for 10 hits.",
+        "Bloated",
+        "Swollen from the inside.",
+        "25% of initial damage per hit every 1.8s.",
+        "Damage over time.",
+        "On-death: Applies Bloated to up to 9 enemies within 1 tile for 4 hits."
+      ],
+      "image": "Bloat.png",
+      "skill": "necromancy",
+      "id": 10
+    },
+    {
+      "ability": "Soul Sap",
+      "members": false,
+      "level": 54,
+      "type": "Basic",
+      "adrenaline": "9",
+      "target": "Single",
+      "damage": "100%",
+      "cooldown": "5.4",
+      "equipment": "Conduit",
+      "description": [
+        "Sap the target's soul.",
+        "X-Y (90%-110%) necromancy damage.",
+        "Generates 1 Residual Soul stack.",
+        "Generates 9% Adrenaline."
+      ],
+      "image": "Soul_Sap.png",
+      "skill": "necromancy",
+      "id": 11
+    },
+    {
+      "ability": "Soul Strike",
+      "members": false,
+      "level": 54,
+      "type": "Other",
+      "adrenaline": "0",
+      "target": "Area",
+      "damage": "150%",
+      "cooldown": "0",
+      "equipment": "Any",
+      "description": [
+        "Strike the target with a residual soul.",
+        "X-Y (135%-165%) necromancy damage.",
+        "Stun and Bind target for 3s.",
+        "X-Y (90%-110%) necromancy damage to enemies within 1 tile of the target."
+      ],
+      "image": "Soul_Strike.png",
+      "skill": "necromancy",
+      "id": 12
+    },
+    {
+      "ability": "Command Putrid Zombie",
+      "members": false,
+      "level": 60,
+      "type": "Other",
+      "adrenaline": "0",
+      "target": "Area",
+      "damage": "400%",
+      "cooldown": "30",
+      "equipment": "Conduit",
+      "description": [
+        "Command the Putrid Zombie to explode.",
+        "360-440% necromancy spirit damage to enemies within 2 tiles."
+      ],
+      "image": "Command_Putrid_Zombie.png",
+      "skill": "necromancy",
+      "id": 13
+    },
+    {
+      "ability": "Command Vengeful Ghost",
+      "members": false,
+      "level": 60,
+      "type": "Other",
+      "adrenaline": "-70",
+      "target": "Single",
+      "damage": "None",
+      "cooldown": "0",
+      "equipment": "Conduit",
+      "description": [
+        "Command the Vengeful Ghost to haunt your enemies.",
+        "- Applies Haunted to the target with each attack for 4.2s.",
+        "Haunted:",
+        "- On-hit: Takes 2x damage from all attacks, capped at 35% bonus damage."
+      ],
+      "image": "Command_Vengeful_Ghost.png",
+      "skill": "necromancy",
+      "id": 14
+    },
+    {
+      "ability": "Spectral Scythe",
+      "members": false,
+      "level": 62,
+      "type": "Other",
+      "adrenaline": "-10",
+      "target": "Area",
+      "damage": "80%",
+      "cooldown": "15",
+      "equipment": "Any",
+      "description": [
+        "Swipe a spectral scythe in front of you.",
+        "X-Y (72%-88%) necromancy damage to the target and up to 9 additional enemies in a cone in the attack direction.",
+        "On-hit: 25% chance to generate 1 Residual Soul stack.",
+        "Can be recast within 5.4s of the previous cast.",
+        "Second Cast: Spin around wildly with a spectral scythe.",
+        "Third Cast: Strike from above, shattering spectral energy around you."
+      ],
+      "image": "Spectral_Scythe.png",
+      "skill": "necromancy",
+      "id": 15
+    },
+    {
+      "ability": "Spectral Scythe",
+      "members": false,
+      "level": 62,
+      "type": "Other",
+      "adrenaline": "-20",
+      "target": "Area",
+      "damage": "200%",
+      "cooldown": "0",
+      "equipment": "Any",
+      "description": [
+        "Spin around wildy with a spectral scythe.",
+        "X-Y (180%-220%) necromancy damage to the target and up to 9 additional enemies within 2 tiles of you.",
+        "On-hit: 25% chance to generate 1 Residual Soul stack."
+      ],
+      "image": "Spectral_Scythe_2.png",
+      "skill": "necromancy",
+      "id": 16
+    },
+    {
+      "ability": "Spectral Scythe",
+      "members": false,
+      "level": 62,
+      "type": "Other",
+      "adrenaline": "-30",
+      "target": "Area",
+      "damage": "250%",
+      "cooldown": "0",
+      "equipment": "Any",
+      "description": [
+        "Strike from above, shattering spectral energy around you.",
+        "X-Y (225%-275%) necromancy damage to the target and up to 9 additional enemies within 2 tiles of you.",
+        "Damage is increased by 1% per 1% of the enemy's missing life points."
+      ],
+      "image": "Spectral_Scythe_3.png",
+      "skill": "necromancy",
+      "id": 17
+    },
+    {
+      "ability": "Volley of Souls",
+      "members": false,
+      "level": 66,
+      "type": "Other",
+      "adrenaline": "0",
+      "target": "Single",
+      "damage": "300-450%",
+      "cooldown": "0",
+      "equipment": "Any",
+      "description": [
+        "Send a volley of residual souls towards the target.",
+        "X-Y (135%-165%) necromancy damage for each Residual Soul stack."
+      ],
+      "image": "Volley_of_Souls.png",
+      "skill": "necromancy",
+      "id": 18
+    },
+    {
+      "ability": "Living Death",
+      "members": false,
+      "level": 76,
+      "type": "Ultimate",
+      "adrenaline": "-100",
+      "target": "Self",
+      "damage": "None",
+      "cooldown": "90",
+      "equipment": "Any",
+      "description": [
+        "Master your instincts and transcend into a Death form.",
+        "Basic Attack: Generates 2 Necrosis stacks.",
+        "Touch of Death: Generates an additional 6% Adrenaline.",
+        "Finger of Death: Deals 1.5x damage.",
+        "Death Skulls: Cooldown reduced to 12s.",
+        "30s duration.",
+        "On-cast: Resets the cooldown of Touch of Death and Death Skulls."
+      ],
+      "image": "Living_Death.png",
+      "skill": "necromancy",
+      "id": 19
+    }
+  ],
+  "defence": [
+    {
+      "ability": "Aggression",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Area",
+      "damage": "",
+      "cooldown": "90",
+      "equipment": "None",
+      "description": [
+        "Burst out in anger.",
+        "Force up to 8 enemies within 5 tiles to attack you.",
+        "Revolution will not trigger this ability.",
+        "Has no effect in PvP.",
+        "Generates no adrenaline."
+      ],
+      "image": "Aggression.png",
+      "skill": "defence",
+      "id": 0
+    },
+    {
+      "ability": "Cease",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "0",
+      "equipment": "None",
+      "description": [
+        "Stops all current and pending attacks.",
+        "Stops any in use channeled[sic] ability.",
+        "Cancels any queued abilities, including those queued by revolution.",
+        "Disables auto-retaliate for 6s.",
+        "Prevents familiars from attacking for 6s.",
+        "Attacking an enemy will cancel the effect.",
+        "Revolution mode will not trigger this ability.",
+        "Generates no adrenaline."
+      ],
+      "image": "Cease_ability.png",
+      "skill": "defence",
+      "id": 1
+    },
+    {
+      "ability": "Unsullied",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "60",
+      "equipment": "None",
+      "description": [
+        "Clean yourself of corruption.",
+        "Stop Sophanem corruption effect increasing your damage taken without losing the damage boost.",
+        "30s duration.",
+        "Revolution will not trigger this ability.",
+        "Generates no adrenaline."
+      ],
+      "image": "Unsullied.png",
+      "skill": "defence",
+      "id": 2
+    },
+    {
+      "ability": "Devotion",
+      "members": false,
+      "level": 1,
+      "type": "Threshold",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "60",
+      "equipment": "None",
+      "description": [
+        "Empower yourself with the protection of the gods.",
+        "Increase the effectiveness of your protection prayers to 100%(75% in PvP).",
+        "9.6s duration.",
+        "Killing an enemy extends the duration by 4.8s up to a maximum of 19.2s."
+      ],
+      "image": "Devotion.png",
+      "skill": "defence",
+      "id": 3
+    },
+    {
+      "ability": "Anticipation",
+      "members": false,
+      "level": 3,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "24.6",
+      "equipment": "None",
+      "description": [
+        "Focus your mind to anticipate incoming attacks.",
+        "Reduce all damage taken by 10%.",
+        "Immune to stuns.",
+        "10.2s duration."
+      ],
+      "image": "Anticipation.png",
+      "skill": "defence",
+      "id": 4
+    },
+    {
+      "ability": "Bash",
+      "members": false,
+      "level": 8,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "Varies",
+      "cooldown": "15",
+      "equipment": "Shield",
+      "description": [
+        "Slam your shield into the target.",
+        "20%-100% ability damage.",
+        "Deal additional damage equal to 10% of your shield's armour value plus your defence level.",
+        "Offensive."
+      ],
+      "image": "Bash.png",
+      "skill": "defence",
+      "id": 5
+    },
+    {
+      "ability": "Revenge",
+      "members": false,
+      "level": 15,
+      "type": "Threshold",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "45",
+      "equipment": "Shield",
+      "description": [
+        "The best defence is offence.",
+        "Each attack dealt to you increases your max damage by 10%.",
+        "Stacks up to 10 times.",
+        "19.2s duration.",
+        "Offensive."
+      ],
+      "image": "Revenge.png",
+      "skill": "defence",
+      "id": 6
+    },
+    {
+      "ability": "Provoke",
+      "members": false,
+      "level": 24,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "",
+      "cooldown": "10.2",
+      "equipment": "None",
+      "description": [
+        "Taunt the target.",
+        "Force the target to attack you.",
+        "In PvP, reduce both targeted player's and your damage towards other players by 50% for 6s."
+      ],
+      "image": "Provoke.png",
+      "skill": "defence",
+      "id": 7
+    },
+    {
+      "ability": "Immortality",
+      "members": false,
+      "level": 29,
+      "type": "Ultimate",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "120",
+      "equipment": "Shield",
+      "description": [
+        "Show tenacity even in the face of death.",
+        "Reduce all damage taken by 25%.",
+        "30s duration.",
+        "If you die during this period, immediately return to life with 40% of your maximum lifepoints.",
+        "The damage reduction effect is removed upon returning to life."
+      ],
+      "image": "Immortality.png",
+      "skill": "defence",
+      "id": 8
+    },
+    {
+      "ability": "Freedom",
+      "members": false,
+      "level": 34,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "30",
+      "equipment": "None",
+      "description": [
+        "Break free from all that stops you.",
+        "Remove stuns and binds.",
+        "Clear damage over time effects.",
+        "Gain immunity to stuns and binds.",
+        "6s duration."
+      ],
+      "image": "Freedom.png",
+      "skill": "defence",
+      "id": 9
+    },
+    {
+      "ability": "Reflect",
+      "members": false,
+      "level": 37,
+      "type": "Threshold",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "30",
+      "equipment": "Shield",
+      "description": [
+        "Use your shield to return attacks back at the attacker.",
+        "Reduce damage taken by 50% (25% in PvP).",
+        "Reflect the reduced damage back at the attacker.",
+        "9.6s duration."
+      ],
+      "image": "Reflect.png",
+      "skill": "defence",
+      "id": 10
+    },
+    {
+      "ability": "Divert",
+      "members": false,
+      "level": 48,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "30",
+      "equipment": "Shield",
+      "description": [
+        "Channel power into your shield to block an attack.",
+        "Block the next attack.",
+        "6s duration.",
+        "Generate 0.8% adrenaline for every 100-200 damage blocked, based on the level of shield equipped with diminishing returns at 3,000, 6,000 and 9,000 damage blocked.",
+        "Powerful attacks will have their damage blocked, but will not generate adrenaline."
+      ],
+      "image": "Divert.png",
+      "skill": "defence",
+      "id": 11
+    },
+    {
+      "ability": "Resonance",
+      "members": false,
+      "level": 48,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "30",
+      "equipment": "Shield",
+      "description": [
+        "Channel power into your shield to block an attack.",
+        "Block the next attack.",
+        "6s duration.",
+        "Heal for 50%-100% damage blocked, based on the level of shield equipped.",
+        "Powerful attacks will have their damage blocked, but will not heal you."
+      ],
+      "image": "Resonance.png",
+      "skill": "defence",
+      "id": 12
+    },
+    {
+      "ability": "Rejuvenate",
+      "members": false,
+      "level": 52,
+      "type": "Ultimate",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "300",
+      "equipment": "Shield",
+      "description": [
+        "Channel your adrenaline to heal yourself.",
+        "Restore 2.5% of your lifepoints every 0.6s over 9.6s.",
+        "Heal over time.",
+        "Fully restore your drained stats."
+      ],
+      "image": "Rejuvenate.png",
+      "skill": "defence",
+      "id": 13
+    },
+    {
+      "ability": "Debilitate",
+      "members": false,
+      "level": 55,
+      "type": "Threshold",
+      "target": "Single",
+      "damage": "60%",
+      "cooldown": "30",
+      "equipment": "None",
+      "description": [
+        "Perform a debilitating kick to the target.",
+        "20%-100% ability damage.",
+        "Reduce the damage taken from the target by 50%.",
+        "7.8s-13.8s duration based on the level of shield equipped."
+      ],
+      "image": "Debilitate.png",
+      "skill": "defence",
+      "id": 14
+    },
+    {
+      "ability": "Preparation",
+      "members": false,
+      "level": 67,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "20.4",
+      "equipment": "Shield",
+      "description": [
+        "Ready yourself for the coming attacks.",
+        "Remaining cooldown of Resonance and Divert are reduced by 3s for every attack received.",
+        "9.6s duration."
+      ],
+      "image": "Preparation.png",
+      "skill": "defence",
+      "id": 15
+    },
+    {
+      "ability": "Barricade",
+      "members": false,
+      "level": 81,
+      "type": "Ultimate",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "60",
+      "equipment": "Shield",
+      "description": [
+        "Summon an impenetrable dome of shields.",
+        "Prevent all damage received.",
+        "4.8s-10.2s duration based on the level of shield equipped."
+      ],
+      "image": "Barricade.png",
+      "skill": "defence",
+      "id": 16
+    },
+    {
+      "ability": "Natural Instinct",
+      "members": false,
+      "level": 85,
+      "type": "Ultimate",
+      "target": "Single",
+      "damage": "",
+      "cooldown": "120",
+      "equipment": "None",
+      "description": [
+        "Leech the targets[sic] energy.",
+        "Steal the target's adrenaline and grant yourself the same amount.",
+        "If the target does not have adrenaline to leech, increase your adrenaline gain by 100%.",
+        "20.4s duration."
+      ],
+      "image": "Natural_Instinct.png",
+      "skill": "defence",
+      "id": 17
+    }
+  ],
+  "constitution": [
+    {
+      "ability": "Eat Food",
+      "members": false,
+      "level": 0,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "0",
+      "equipment": "Food",
+      "description": [
+        "Consume the first piece of food in your backpack.",
+        "Revolution will not trigger this ability.",
+        "Generates no adrenaline."
+      ],
+      "image": "Eat_Food.png",
+      "skill": "constitution",
+      "id": 0
+    },
+    {
+      "ability": "Demon Slayer",
+      "members": false,
+      "level": 1,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "60",
+      "equipment": "None",
+      "description": [
+        "Gain courage against demons.",
+        "Increase damage dealt to demons by 15%.",
+        "10.2s duration.",
+        "Revolution will not trigger this ability.",
+        "Generates no adrenaline."
+      ],
+      "image": "Demon_Slayer_ability.png",
+      "skill": "constitution",
+      "id": 1
+    },
+    {
+      "ability": "Dragon Slayer",
+      "members": false,
+      "level": 1,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "60",
+      "equipment": "None",
+      "description": [
+        "Gain courage against dragons.",
+        "Increase damage dealt to dragons by 15%.",
+        "10.2s duration.",
+        "Revolution will not trigger this ability.",
+        "Generates no adrenaline."
+      ],
+      "image": "Dragon_Slayer_ability.png",
+      "skill": "constitution",
+      "id": 2
+    },
+    {
+      "ability": "Essence of Finality",
+      "members": false,
+      "level": 1,
+      "type": "Basic",
+      "target": "Varies",
+      "damage": "Varies",
+      "cooldown": "0",
+      "equipment": "Essence of Finality amulet",
+      "description": [
+        "Harness the power of a special attack stored within an Essence of Finality amulet."
+      ],
+      "image": "Essence_of_Finality.png",
+      "skill": "constitution",
+      "id": 3
+    },
+    {
+      "ability": "Ingenuity of the Humans",
+      "members": false,
+      "level": 1,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "90",
+      "equipment": "None",
+      "description": [
+        "Study the target.",
+        "The next ability or spell cast is guaranteed to hit the target.",
+        "6s duration, or until another ability or spell is used.",
+        "Revolution will not trigger this ability.",
+        "Generates no adrenaline."
+      ],
+      "image": "Ingenuity_of_the_Humans.png",
+      "skill": "constitution",
+      "id": 4
+    },
+    {
+      "ability": "Kuradal's Favour",
+      "members": false,
+      "level": 1,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "60",
+      "equipment": "None",
+      "description": [
+        "Flaunt your slayer prowess.",
+        "Instantly respawn any Kuradal's Dungeon monsters you kill.",
+        "30s duration.",
+        "Revolution will not trigger this ability.",
+        "Generates no adrenaline."
+      ],
+      "image": "Kuradals_Favour.png",
+      "skill": "constitution",
+      "id": 5
+    },
+    {
+      "ability": "Limitless",
+      "members": false,
+      "level": 1,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "90",
+      "equipment": "None",
+      "description": [
+        "Open your mind and realise your potential.",
+        "Allow threshold abilities to be used below 50% adrenaline.",
+        "6s duration.",
+        "Can only be used when below 60% adrenaline.",
+        "Revolution will not trigger this ability.",
+        "Generates no adrenaline."
+      ],
+      "image": "Limitless.png",
+      "skill": "constitution",
+      "id": 6
+    },
+    {
+      "ability": "Regenerate",
+      "members": false,
+      "level": 1,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "0",
+      "equipment": "None",
+      "description": [
+        "Focus your remaining adrenaline to heal yourself.",
+        "Heal 2% of your maximum Life Points every 0.6s at the cost of 10% adrenaline.",
+        "Cannot be used in combat."
+      ],
+      "image": "Regenerate_ability.png",
+      "skill": "constitution",
+      "id": 7
+    },
+    {
+      "ability": "Sacrifice",
+      "members": false,
+      "level": 1,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "60%",
+      "cooldown": "30",
+      "equipment": "None",
+      "description": [
+        "Offer a sacrifice, leaving the target forsaken.",
+        "20%-100% ability damage.",
+        "Damage ignores the target's protection prayers.",
+        "Heal 25% of the damage you deal.",
+        "Heal 100% of the damage you deal if the target dies."
+      ],
+      "image": "Sacrifice.png",
+      "skill": "constitution",
+      "id": 8
+    },
+    {
+      "ability": "Shout - Aggressive Stance",
+      "members": false,
+      "level": 1,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "0",
+      "equipment": "Collector horn",
+      "description": [
+        "Shout about aggressive stance.",
+        "Only used within Barbarian Assault.",
+        "Generates no adrenaline."
+      ],
+      "image": "Shout_-_Aggressive_Stance.png",
+      "skill": "constitution",
+      "id": 9
+    },
+    {
+      "ability": "Shout - Balanced Stance",
+      "members": false,
+      "level": 1,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "0",
+      "equipment": "Collector horn",
+      "description": [
+        "Shout about balanced stance.",
+        "Only used within Barbarian Assault.",
+        "Generates no adrenaline."
+      ],
+      "image": "Shout_-_Balanced_Stance.png",
+      "skill": "constitution",
+      "id": 10
+    },
+    {
+      "ability": "Shout - Blue Egg",
+      "members": false,
+      "level": 1,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "0",
+      "equipment": "Attacker horn",
+      "description": [
+        "Shout about blue eggs.",
+        "Only used within Barbarian Assault.",
+        "Generates no adrenaline."
+      ],
+      "image": "Shout_-_Blue_Egg.png",
+      "skill": "constitution",
+      "id": 11
+    },
+    {
+      "ability": "Shout - Crackers",
+      "members": false,
+      "level": 1,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "0",
+      "equipment": "Healer horn",
+      "description": [
+        "Shout about crackers.",
+        "Only used within Barbarian Assault.",
+        "Generates no adrenaline."
+      ],
+      "image": "Shout_-_Crackers.png",
+      "skill": "constitution",
+      "id": 12
+    },
+    {
+      "ability": "Shout - Defensive Stance",
+      "members": false,
+      "level": 1,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "0",
+      "equipment": "Collector horn",
+      "description": [
+        "Shout about defensive stance.",
+        "Only used within Barbarian Assault.",
+        "Generates no adrenaline."
+      ],
+      "image": "Shout_-_Defensive_Stance.png",
+      "skill": "constitution",
+      "id": 13
+    },
+    {
+      "ability": "Shout - Green Egg",
+      "members": false,
+      "level": 1,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "0",
+      "equipment": "Attacker horn",
+      "description": [
+        "Shout about green eggs.",
+        "Only used within Barbarian Assault.",
+        "Generates no adrenaline."
+      ],
+      "image": "Shout_-_Green_Egg.png",
+      "skill": "constitution",
+      "id": 14
+    },
+    {
+      "ability": "Shout - Poisoned Meat",
+      "members": false,
+      "level": 1,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "0",
+      "equipment": "Defender horn",
+      "description": [
+        "Shout about poisoned meat.",
+        "Only used within Barbarian Assault.",
+        "Generates no adrenaline."
+      ],
+      "image": "Shout_-_Poisoned_Meat.png",
+      "skill": "constitution",
+      "id": 15
+    },
+    {
+      "ability": "Shout - Poisoned Tofu",
+      "members": false,
+      "level": 1,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "0",
+      "equipment": "Defender horn",
+      "description": [
+        "Shout about poisoned tofu.",
+        "Only used within Barbarian Assault.",
+        "Generates no adrenaline."
+      ],
+      "image": "Shout_-_Poisoned_Tofu.png",
+      "skill": "constitution",
+      "id": 16
+    },
+    {
+      "ability": "Shout - Poisoned Worms",
+      "members": false,
+      "level": 1,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "0",
+      "equipment": "Defender horn",
+      "description": [
+        "Shout about poisoned worms.",
+        "Only used within Barbarian Assault.",
+        "Generates no adrenaline."
+      ],
+      "image": "Shout_-_Poisoned_Worms.png",
+      "skill": "constitution",
+      "id": 17
+    },
+    {
+      "ability": "Shout - Red Egg",
+      "members": false,
+      "level": 1,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "0",
+      "equipment": "Attacker horn",
+      "description": [
+        "Shout about red eggs.",
+        "Only used within Barbarian Assault.",
+        "Generates no adrenaline."
+      ],
+      "image": "Shout_-_Red_Egg.png",
+      "skill": "constitution",
+      "id": 18
+    },
+    {
+      "ability": "Shout - Tofu",
+      "members": false,
+      "level": 1,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "0",
+      "equipment": "Healer horn",
+      "description": [
+        "Shout about tofu.",
+        "Only used within Barbarian Assault.",
+        "Generates no adrenaline."
+      ],
+      "image": "Shout_-_Tofu.png",
+      "skill": "constitution",
+      "id": 19
+    },
+    {
+      "ability": "Shout - Worms",
+      "members": false,
+      "level": 1,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "0",
+      "equipment": "Healer horn",
+      "description": [
+        "Shout about worms.",
+        "Only used within Barbarian Assault.",
+        "Generates no adrenaline."
+      ],
+      "image": "Shout_-_Worms.png",
+      "skill": "constitution",
+      "id": 20
+    },
+    {
+      "ability": "Slayer's Insight",
+      "members": false,
+      "level": 1,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "120",
+      "equipment": "None",
+      "description": [
+        "Gain insight into the target.",
+        "Increase Slayer experience gained by 10%.",
+        "30s duration.",
+        "Revolution will not trigger this ability.",
+        "Generates no adrenaline."
+      ],
+      "image": "Slayers_Insight.png",
+      "skill": "constitution",
+      "id": 21
+    },
+    {
+      "ability": "Transfigure",
+      "members": false,
+      "level": 1,
+      "type": "Ultimate",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "180",
+      "equipment": "None",
+      "description": [
+        "Empower your body.",
+        "Incapacitate yourself for 6s.",
+        "Afterwards heal 250% of any damage taken, to a maximum of 75% of your Life Points.",
+        "Become immune to binds and stuns for 15s."
+      ],
+      "image": "Transfigure.png",
+      "skill": "constitution",
+      "id": 22
+    },
+    {
+      "ability": "Undead Slayer",
+      "members": false,
+      "level": 1,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "60",
+      "equipment": "None",
+      "description": [
+        "Gain courage against the undead.",
+        "Increase damage dealt to undead by 15%.",
+        "10.2s duration.",
+        "Revolution will not trigger this ability.",
+        "Generates no adrenaline."
+      ],
+      "image": "Undead_Slayer_ability.png",
+      "skill": "constitution",
+      "id": 23
+    },
+    {
+      "ability": "Weapon Special Attack",
+      "members": false,
+      "level": 1,
+      "type": "Special",
+      "target": "Varies",
+      "damage": "Varies",
+      "cooldown": "0",
+      "equipment": "Special attacks",
+      "description": ["Some of the most powerful weapons grant you unique special attacks."],
+      "image": "Weapon_Special_Attack.png",
+      "skill": "constitution",
+      "id": 24
+    },
+    {
+      "ability": "Aggressive Stance",
+      "members": false,
+      "level": 10,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "0",
+      "equipment": "Attacker horn",
+      "description": [
+        "Adopt an aggressive fighting stance.",
+        "Only used within Barbarian Assault.",
+        "Generates no adrenaline."
+      ],
+      "image": "Aggressive_Stance.png",
+      "skill": "constitution",
+      "id": 25
+    },
+    {
+      "ability": "Balanced Stance",
+      "members": false,
+      "level": 10,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "0",
+      "equipment": "Attacker horn",
+      "description": [
+        "Adopt a balanced fighting stance.",
+        "Only used within Barbarian Assault.",
+        "Generates no adrenaline."
+      ],
+      "image": "Balanced_Stance.png",
+      "skill": "constitution",
+      "id": 26
+    },
+    {
+      "ability": "Defensive Stance",
+      "members": false,
+      "level": 10,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "0",
+      "equipment": "Attacker horn",
+      "description": [
+        "Adopt a defensive fighting stance.",
+        "Only used within Barbarian Assault.",
+        "Generates no adrenaline."
+      ],
+      "image": "Defensive_Stance.png",
+      "skill": "constitution",
+      "id": 27
+    },
+    {
+      "ability": "Siphon",
+      "members": false,
+      "level": 20,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "",
+      "cooldown": "60",
+      "equipment": "None",
+      "description": [
+        "Siphon strength from the target.",
+        "Steal 10% adrenaline from the target.",
+        "Protect yourself from further Siphons for 6s.",
+        "Only works on targets with more adrenaline than you."
+      ],
+      "image": "Siphon.png",
+      "skill": "constitution",
+      "id": 28
+    },
+    {
+      "ability": "Incite",
+      "members": false,
+      "level": 24,
+      "type": "Basic",
+      "target": "Self",
+      "damage": "None",
+      "cooldown": "0",
+      "equipment": "None",
+      "description": [
+        "Encourage the target to attack you.",
+        "Increases the likelihood the target will attack you.",
+        "Active until cancelled.",
+        "Has no effect in PvP.",
+        "Generates no adrenaline."
+      ],
+      "image": "Incite.png",
+      "skill": "constitution",
+      "id": 29
+    },
+    {
+      "ability": "Tuska's Wrath",
+      "members": false,
+      "level": 50,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "70%",
+      "cooldown": "15",
+      "equipment": "None",
+      "description": [
+        "Invoke the wrath of Tuska on the target.",
+        "30%-110% ability damage.",
+        "If used against your active slayer target empower the ability,",
+        "instead dealing 10,000% of your Slayer level as damage",
+        "Empowered damage has a 2m cooldown."
+      ],
+      "image": "Tuskas_Wrath.png",
+      "skill": "constitution",
+      "id": 30
+    },
+    {
+      "ability": "Shatter",
+      "members": false,
+      "level": 70,
+      "type": "Threshold",
+      "target": "Single",
+      "damage": "Varies",
+      "cooldown": "120",
+      "equipment": "Any",
+      "description": [
+        "Shatter any Storm Shards on the target.",
+        "Unleash all Storm Shard damage stacked on the target.",
+        "Up to a maximum of 30,000 damage.",
+        "Requires at least 1 stack of Storm Shard to deal damage."
+      ],
+      "image": "Shatter.png",
+      "skill": "constitution",
+      "id": 31
+    },
+    {
+      "ability": "Storm Shards",
+      "members": false,
+      "level": 70,
+      "type": "Basic",
+      "target": "Single",
+      "damage": "",
+      "cooldown": "30",
+      "equipment": "Any",
+      "description": [
+        "Hurl a Storm Shard at the target.",
+        "Stack 75%-95% ability damage on the target.",
+        "Stack 25%-32% damage in PvP.",
+        "Trigger all stacked damage by using the Shatter ability.",
+        "Maximum of 10 stacks."
+      ],
+      "image": "Storm_Shards.png",
+      "skill": "constitution",
+      "id": 32
+    },
+    {
+      "ability": "Guthix's Blessing",
+      "members": false,
+      "level": 85,
+      "type": "Ultimate",
+      "target": "Self",
+      "damage": "",
+      "cooldown": "300",
+      "equipment": "None",
+      "description": [
+        "Invoke a butterfly that heals you.",
+        "Heal 8% of your Life Points every 1.8s.",
+        "9s duration, unless the butterfly is destroyed by enemies."
+      ],
+      "image": "Guthixs_Blessing.png",
+      "skill": "constitution",
+      "id": 33
+    },
+    {
+      "ability": "Reprisal",
+      "members": false,
+      "level": 85,
+      "type": "Threshold",
+      "target": "Single",
+      "damage": "Varies",
+      "cooldown": "60",
+      "equipment": "None",
+      "description": [
+        "Use the targets power against them.",
+        "Store incoming damage over 6s, or until Reprisal is cast again.",
+        "Then deal 100% of the damage stored back at the target.",
+        "Can cause up to 10,000 damage (25,000 damage in PvP).",
+        "In PvP there are diminishing returns on the damage dealt as stored damage increases."
+      ],
+      "image": "Reprisal.png",
+      "skill": "constitution",
+      "id": 34
+    },
+    {
+      "ability": "Onslaught",
+      "members": false,
+      "level": 90,
+      "type": "Ultimate",
+      "target": "Single",
+      "damage": "Varies",
+      "cooldown": "120",
+      "equipment": "Any",
+      "description": [
+        "Assault the target with unbridled power.",
+        "Initial hit deals 50%-150% ability damage.",
+        "Each subsequent hit adds 33% damage for 26 hits.",
+        "Channeled attack.",
+        "Each hit costs 25% adrenaline.",
+        "Will damage you for 25% of damage dealt when out of adrenaline.",
+        "Will deal an additional 1,000 damage to you after 10 hits."
+      ],
+      "image": "Onslaught.png",
+      "skill": "constitution",
+      "id": 35
+    },
+    {
+      "ability": "Ice Asylum",
+      "members": false,
+      "level": 91,
+      "type": "Ultimate",
+      "target": "Area",
+      "damage": "",
+      "cooldown": "300",
+      "equipment": "None",
+      "description": [
+        "Summon a healing crystal.",
+        "Heal anyone near the crystal for 1%-7% of their maximum Life Points every 3.6s.",
+        "Healing percentage is based on proximity to the crystal.",
+        "The crystal has a capacity of 300% of your maximum Life Points.",
+        "21.6s duration, or until the crystal capacity is drained."
+      ],
+      "image": "Ice_Asylum.png",
+      "skill": "constitution",
+      "id": 36
+    }
+  ],
+  "agility": [
+    {
+      "ability": "Dive",
+      "members": false,
+      "level": 5,
+      "type": "Basic",
+      "target": "Self",
+      "cooldown": "20.4",
+      "equipment": "None",
+      "description": [
+        "Dive forward.",
+        "Instantly move to selected tile.",
+        "Max 10 tile range.",
+        "Revolution mode will not trigger this ability."
+      ],
+      "image": "Dive.png",
+      "skill": "agility",
+      "id": 0
+    },
+    {
+      "ability": "Escape",
+      "members": false,
+      "level": 5,
+      "type": "Basic",
+      "target": "Self",
+      "cooldown": "20.4",
+      "equipment": "None",
+      "description": [
+        "Leap backwards to maintain range.",
+        "Leap back 1 tile short of the maximum range of your ranged weapon.",
+        "Leap 7 tiles if you don't have a ranged weapon equipped.",
+        "(With double Escape unlocked:) This ability has a max of 2 charges."
+      ],
+      "image": "Escape.png",
+      "skill": "agility",
+      "id": 1
+    },
+    {
+      "ability": "Surge",
+      "members": false,
+      "level": 5,
+      "type": "Basic",
+      "target": "Self",
+      "cooldown": "20.4",
+      "equipment": "None",
+      "description": [
+        "Teleport forward.",
+        "Instantly teleport 10 tiles in a straight line ahead.",
+        "(With double Surge unlocked:) This ability has a max of 2 charges."
+      ],
+      "image": "Surge.png",
+      "skill": "agility",
+      "id": 2
+    }
+  ]
+}
