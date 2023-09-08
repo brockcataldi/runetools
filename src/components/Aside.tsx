@@ -3,7 +3,7 @@ import { styled } from 'styled-components'
 import { useRecoilValue } from 'recoil'
 import { gsap } from 'gsap'
 
-import capitalize from '../utilities/capitalize'
+import { capitalize } from '../utilities/Utilities'
 
 import Accordion from './Accordion'
 import AbilityList from './AbilityList'
@@ -16,8 +16,8 @@ import { currentDragParentAtom, filteredAbilitiesSelector } from '../data/atoms'
 const Wrapper = styled.aside`
     position: fixed;
     width: 20rem;
-    height: 100vh;
-    top: 0;
+    height: calc(100vh - 74px);
+    top: 74px;
     right: 0;
     background-color: #071b25;
     box-shadow: -2px 0px 3px black;

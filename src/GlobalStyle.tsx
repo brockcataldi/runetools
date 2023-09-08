@@ -10,6 +10,11 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
   }
+
+  body, html{
+    body: 0;
+    background-color: #010b10;
+  }
 `
 
 export default GlobalStyle

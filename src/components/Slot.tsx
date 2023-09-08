@@ -1,6 +1,8 @@
+import { RefObject } from 'react'
 import { styled } from 'styled-components'
 
-import { IAbility } from '../data/models'
+import { ISlotValue } from '../data/models'
+import Ability from './Ability'
 
 const Wrapper = styled.picture`
     width: 42px;
@@ -9,26 +11,31 @@ const Wrapper = styled.picture`
     box-sizing: border-box;
     padding: 0;
     border: 1px solid #39444b;
-`
-
-const Image = styled.img`
-    width: 40px;
-    height: 40px;
-    display: block;
-    object-fit: contain;
+    box-shadow: inset 0 0 8px 3px rgba(0, 0, 0, 0.25);
 `
 
 interface ISlotProps {
-    ability: IAbility | null
+    ability: ISlotValue
     bar: number
     index: number
+    slotsRef: RefObject<ISlotValue[][]>
+    setSlots: (slots: ISlotValue[][]) => void
 }
 
-const Slot = ({ ability, bar, index }: ISlotProps) => {
+const Slot = ({ ability, bar, index, setSlots, slotsRef }: ISlotProps) => {
     return (
         <Wrapper className={`slot sid-${bar}-${index}`}>
             {ability === null ? null : (
-                <Image src={`/abilities/${ability.image}`} alt={ability.ability} />
+                <Ability
+                    $frame={false}
+                    $size={'large'}
+                    ability={ability}
+                    bar={bar}
+                    index={index}
+                    inSlot={true}
+                    setSlots={setSlots}
+                    slotsRef={slotsRef}
+                />
             )}
         </Wrapper>
     )

@@ -4,71 +4,112 @@ import { gsap } from 'gsap'
 import { Draggable } from 'gsap/Draggable'
 import { useSetRecoilState } from 'recoil'
 
-import getClassStartsWith from '../utilities/getClassStartsWith'
-import replaceValueAtIndex from '../utilities/replaceValueAtIndex'
+import {
+    getClassStartsWith,
+    replaceValueAtIndex2D,
+    swapValuesAtIndexes2D,
+} from '../utilities/Utilities'
 
 import { IAbility, ISlotValue } from '../data/models'
 import { currentDragParentAtom } from '../data/atoms'
 
-const Wrapper = styled.div`
-    width: 32px;
-    height: 32px;
+interface IAbilitySizeProps {
+    $size?: 'small' | 'large'
+}
+
+interface IAbilityWrapperProps extends IAbilitySizeProps {
+    $frame: boolean
+}
+
+const Wrapper = styled.div<IAbilityWrapperProps>`
     display: block;
     box-sizing: border-box;
     padding: 0;
-    border: 1px solid #39444b;
+
+    ${({ $size, $frame }) => {
+        if ($size === 'large') {
+            return `
+                border: ${$frame ? '1px solid #39444b' : 'none'} 
+                width: ${$frame ? '42px' : '40px'};
+                height: ${$frame ? '42px' : '40px'};
+            `
+        }
+
+        return `
+            width: ${$frame ? '32px' : '30px'};
+            height: ${$frame ? '32px' : '30px'};
+        `
+    }}
 `
 
-const Image = styled.img`
-    width: 30px;
-    height: 30px;
+const Image = styled.img<IAbilitySizeProps>`
     display: block;
     object-fit: contain;
+
+    ${({ $size }) => {
+        if ($size === 'large') {
+            return `
+                width: 40px;
+                height: 40px;
+            `
+        }
+
+        return `
+            width: 30px;
+            height: 30px;
+        `
+    }}
 `
 
-interface IAbilityProps {
+interface IAbilityProps extends IAbilityWrapperProps {
+    inSlot: boolean
+    bar: number | null
+    index: number
     ability: IAbility
     slotsRef: RefObject<ISlotValue[][]>
     setSlots: (slots: ISlotValue[][]) => void
 }
 
-const Ability = ({ ability, setSlots, slotsRef }: IAbilityProps) => {
-    const ref = useRef<HTMLDivElement>(null)
-    const instance = useRef<Draggable[] | null>(null)
+const Ability = ({
+    ability,
+    $size = 'small',
+    $frame,
+    inSlot,
+    setSlots,
+    slotsRef,
+    bar,
+    index,
+}: IAbilityProps) => {
+    const elementRef = useRef<HTMLDivElement>(null)
+    const draggableInstance = useRef<Draggable[] | null>(null)
 
     const setCurrentDragParent = useSetRecoilState(currentDragParentAtom)
 
-    const updateSlot = (bars: ISlotValue[][], ability: ISlotValue, bar: number, index: number) => {
-        setSlots(
-            replaceValueAtIndex<ISlotValue[]>(
-                bars,
-                replaceValueAtIndex<ISlotValue>(bars[bar], ability, index),
-                bar,
-            ),
-        )
-    }
-
     const testSlot = (slot: Element) => {
-        if (!Draggable.hitTest(ref.current, slot, 20) || !slotsRef.current) {
+        if (!Draggable.hitTest(elementRef.current, slot, 20) || !slotsRef.current) {
             return
         }
 
-        const sid = getClassStartsWith(slot.classList, 'sid')
+        const targetSid = getClassStartsWith(slot.classList, 'sid')
 
-        if (sid === false) {
+        if (targetSid === false) {
             return
         }
 
-        const [, barString, indexString]: string[] = sid.split('-')
+        const [, targetBarString, targetIndexString]: string[] = targetSid.split('-')
 
-        const bar: number = Number(barString)
-        const index: number = Number(indexString)
+        const targetBar: number = Number(targetBarString)
+        const targetIndex: number = Number(targetIndexString)
 
-        updateSlot(slotsRef.current, ability, bar, index)
+        if (inSlot && bar !== null) {
+            setSlots(swapValuesAtIndexes2D(slotsRef.current, targetIndex, targetBar, index, bar))
+        } else {
+            setSlots(replaceValueAtIndex2D(slotsRef.current, ability, targetIndex, targetBar))
+        }
     }
 
     const onDragEnd = () => {
-        if (!ref.current) {
+        if (!elementRef.current) {
             return
         }
 
@@ -80,7 +121,7 @@ const Ability = ({ ability, setSlots, slotsRef }: IAbilityProps) => {
 
         slotElements.forEach(testSlot)
 
-        gsap.set(ref.current, {
+        gsap.set(elementRef.current, {
             x: 0,
             y: 0,
         })
@@ -93,24 +134,24 @@ const Ability = ({ ability, setSlots, slotsRef }: IAbilityProps) => {
     }
 
     useLayoutEffect(() => {
-        instance.current = Draggable.create(ref.current, {
+        draggableInstance.current = Draggable.create(elementRef.current, {
             type: 'x,y',
             onDragEnd: onDragEnd,
             onDragStart: onDragStart,
         })
 
         return () => {
-            if (instance.current === null) {
+            if (draggableInstance.current === null) {
                 return
             }
 
-            instance.current[0].kill()
+            draggableInstance.current[0].kill()
         }
     }, [])
 
     return (
-        <Wrapper ref={ref}>
-            <Image src={`/abilities/${ability.image}`} alt={ability.ability} />
+        <Wrapper $size={$size} $frame={$frame} ref={elementRef}>
+            <Image $size={$size} src={`/abilities/${ability.image}`} alt={ability.ability} />
         </Wrapper>
     )
 }

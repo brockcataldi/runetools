@@ -1,7 +1,9 @@
 import { RefObject } from 'react'
 import { styled } from 'styled-components'
-import { IAbility, ISlotValue } from '../data/models'
+
 import Ability from './Ability'
+
+import { IAbility, ISlotValue } from '../data/models'
 
 const Wrapper = styled.div`
     display: grid;
@@ -21,10 +23,14 @@ interface IAbilityListProps {
 const AbilityList = ({ abilities, skill, slotsRef, setSlots }: IAbilityListProps) => {
     return (
         <Wrapper>
-            {abilities.map((ability) => (
+            {abilities.map((ability, index) => (
                 <Ability
                     key={`${skill}-${ability.id}`}
+                    $frame={true}
                     ability={ability}
+                    bar={null}
+                    index={index}
+                    inSlot={false}
                     setSlots={setSlots}
                     slotsRef={slotsRef}
                 />

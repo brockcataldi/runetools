@@ -1,15 +1,17 @@
 import { styled } from 'styled-components'
 import { RefObject } from 'react'
 
-import removeValueAtIndex from '../utilities/removeValueAtIndex'
-import replaceValueAtIndex from '../utilities/replaceValueAtIndex'
-
 import Slot from './Slot'
+
+import {
+    removeValueAtIndex,
+    replaceValueAtIndex,
+    swapValuesAtIndexes,
+} from '../utilities/Utilities'
 
 import { TrashIcon, RefreshIcon, ChevronUp, ChevronDown } from '../vectors/vectors'
 
 import { ISlotValue } from '../data/models'
-import swapValuesAtIndexes from '../utilities/swapValuesAtIndexes'
 
 const Wrapper = styled.section`
     width: fit-content;
@@ -97,7 +99,7 @@ const Bar = ({ id, slots, total, setSlots, slotsRef }: IBarProps) => {
         if (!slotsRef.current) {
             return
         }
-        
+
         setSlots(swapValuesAtIndexes<ISlotValue[]>(slotsRef.current, id, id + 1))
     }
 
@@ -123,7 +125,14 @@ const Bar = ({ id, slots, total, setSlots, slotsRef }: IBarProps) => {
             )}
             <Slots>
                 {slots.map((slot, index) => (
-                    <Slot key={`bar${id}-slot${index}`} ability={slot} bar={id} index={index} />
+                    <Slot
+                        key={`bar${id}-slot${index}`}
+                        ability={slot}
+                        bar={id}
+                        index={index}
+                        setSlots={setSlots}
+                        slotsRef={slotsRef}
+                    />
                 ))}
             </Slots>
             <ButtonGroup>
