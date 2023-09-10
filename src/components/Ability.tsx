@@ -36,6 +36,7 @@ const Wrapper = styled.div<IAbilityWrapperProps>`
         }
 
         return `
+            border: ${$frame ? '1px solid #39444b' : 'none'} 
             width: ${$frame ? '32px' : '30px'};
             height: ${$frame ? '32px' : '30px'};
         `
@@ -71,13 +72,13 @@ interface IAbilityProps extends IAbilityWrapperProps {
 }
 
 const Ability = ({
-    ability,
-    $size = 'small',
     $frame,
+    $size = 'small',
+    ability,
     inSlot,
+    bar,
     setSlots,
     slotsRef,
-    bar,
     index,
 }: IAbilityProps) => {
     const elementRef = useRef<HTMLDivElement>(null)

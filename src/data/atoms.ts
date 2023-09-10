@@ -1,6 +1,6 @@
 import { atom, selector } from 'recoil'
 
-import { IAbilityMap, ISlotValue } from './models'
+import { IAbilityMap } from './models'
 
 import abilities from './abilities.json'
 
@@ -9,10 +9,10 @@ const currentDragParentAtom = atom<string | null>({
     default: null,
 })
 
-const barsAtom = atom<ISlotValue[][]>({
-    key: 'bars',
-    default: [new Array(14).fill(null)],
-})
+// const barsAtom = atom<ISlotValue[][]>({
+//     key: 'bars',
+//     default: [new Array(14).fill(null)],
+// })
 
 const abilitiesAtom = atom<IAbilityMap>({
     key: 'abilities',
@@ -22,6 +22,14 @@ const abilitiesAtom = atom<IAbilityMap>({
 const abilitiesTypeExclusionAtom = atom<string[]>({
     key: 'abilitiesTypeExclusion',
     default: [],
+})
+
+const abilitiesTypes = selector({
+    key: 'abilityTypes',
+    get: ({get}) => {
+        const abilities = get(abilitiesAtom);
+        return Object.keys(abilities);
+    }
 })
 
 const filteredAbilitiesSelector = selector({
@@ -42,9 +50,10 @@ const filteredAbilitiesSelector = selector({
 })
 
 export {
-    barsAtom,
+    // barsAtom,
     currentDragParentAtom,
     abilitiesAtom,
+    abilitiesTypes,
     abilitiesTypeExclusionAtom,
     filteredAbilitiesSelector,
 }

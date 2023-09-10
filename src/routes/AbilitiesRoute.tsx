@@ -1,14 +1,21 @@
 import { styled } from 'styled-components'
+import { useStateRef } from '../utilities/Utilities';
+import { useSearchParams } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useRecoilValue } from 'recoil';
+import { compressToBase64 } from 'lz-string';
 
-import useRecoilStateRef from './utilities/useRecoilStateRef'
+import { fromStorable, toStorable } from '../utilities/Utilities';
 
-import Aside from './components/Aside'
-import Bar from './components/Bar'
+import Aside from '../components/Aside'
+import Bar from '../components/Bar'
+import Header from '../components/Header';
 
-import { PlusIcon, ShareIcon } from './vectors/vectors'
+import { PlusIcon } from '../vectors/vectors'
 
-import { barsAtom } from './data/atoms'
-import { ISlotValue } from './data/models'
+import { abilitiesAtom, abilitiesTypes } from '../data/atoms'
+import { ISlotValue } from '../data/models'
+
 
 // Colors
 // #16232b - Background 10
@@ -16,55 +23,6 @@ import { ISlotValue } from './data/models'
 // #010b10 - Background 100
 
 const Container = styled.div``
-
-const Header = styled.header`
-    position: fixed;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 1rem;
-    z-index: 3;
-    background-color: #071b25;
-    top: 0;
-    left: 0;
-    box-shadow: 0px 2px 3px black;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-`
-
-const HeaderTitle = styled.h1`
-    font-size: 1.5rem;
-    font-weight: 700;
-    font-family: 'Cinzel', serif;
-    color: #e1bb34;
-    display: block;
-    margin: 0;
-    margin: 0;
-`
-
-const HeaderButton = styled.button`
-    appearance: none;
-    background-color: #16232b;
-    border-width: 1px;
-    border-style: solid;
-    border-bottom-color: black;
-    border-right-color: black;
-    border-left-color: #39444b;
-    border-top-color: #39444b;
-    color: #e1bb34;
-    box-sizing: border-box;
-    padding: 0.5rem 1rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.75rem;
-    cursor: pointer;
-
-    svg {
-        width: 1.25rem;
-        height: 1.25rem;
-    }
-`
 
 const Main = styled.main`
     position: absolute;
@@ -112,8 +70,25 @@ const ButtonText = styled.span`
     margin: 0;
 `
 
-const App = () => {
-    const [bars, setBars, barsRef] = useRecoilStateRef<ISlotValue[][]>(barsAtom)
+const AbilitiesRoute = () => {
+
+    const types = useRecoilValue(abilitiesTypes)
+    const abilities = useRecoilValue(abilitiesAtom);
+    const [search, setSearch] = useSearchParams();
+
+    const [bars, setBars, barsRef] = useStateRef<ISlotValue[][]>(
+        fromStorable(search.get('d'), types, abilities)
+    );
+
+    useEffect(() => {
+        setSearch(
+            { 
+                d:  compressToBase64(
+                    JSON.stringify(toStorable(bars, types))
+                ) 
+            }
+        )
+    }, [bars]);
 
     const onClick = () => {
         setBars([...bars, new Array(14).fill(null)])
@@ -121,13 +96,7 @@ const App = () => {
 
     return (
         <Container>
-            <Header>
-                <HeaderTitle>RuneTools</HeaderTitle>
-                <HeaderButton>
-                    <ShareIcon />
-                    <ButtonText>Share</ButtonText>
-                </HeaderButton>
-            </Header>
+            <Header />
             <Main>
                 <Wrapper>
                     {bars.map((slots, index) => (
@@ -153,4 +122,4 @@ const App = () => {
     )
 }
 
-export default App
+export default AbilitiesRoute

@@ -23,5 +23,6 @@ interface ISlot {
 }
 
 type ISlotValue = IAbility | null
+type IStorable = (number[] | null)[][]
 
-export type { IAbility, IAbilityMap, ISlot, ISlotValue }
+export type { IAbility, IAbilityMap, ISlot, ISlotValue, IStorable }

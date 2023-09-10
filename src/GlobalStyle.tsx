@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body, html{
-    body: 0;
+    margin: 0;
     background-color: #010b10;
   }
 `
