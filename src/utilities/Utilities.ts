@@ -21,5 +21,5 @@ export {
     swapValuesAtIndexes2D,
     toStorable,
     useRecoilStateRef,
-    useStateRef
+    useStateRef,
 }

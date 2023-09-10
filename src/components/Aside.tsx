@@ -19,7 +19,7 @@ const Wrapper = styled.aside`
     height: calc(100vh - 74px);
     top: 74px;
     right: 0;
-    background-color: #071b25;
+    background-color: var(--color-background-50);
     box-shadow: -2px 0px 3px black;
     z-index: 1;
     overflow-y: auto;
@@ -33,7 +33,7 @@ const Title = styled.h2`
     font-size: 1.5rem;
     font-weight: 700;
     font-family: 'Cinzel', serif;
-    color: #e1bb34;
+    color: var(--color-text-50);
     display: block;
     margin: 0 0 0.5rem 0;
 `

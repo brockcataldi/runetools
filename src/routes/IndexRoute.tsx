@@ -14,7 +14,7 @@ const Title = styled.h1`
     font-size: 4rem;
     font-weight: 700;
     font-family: 'Cinzel', serif;
-    color: #e1bb34;
+    color: var(--color-text-50);
     margin: 0 0 1rem;
     text-align: center;
 `

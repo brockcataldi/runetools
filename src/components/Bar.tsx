@@ -2,6 +2,7 @@ import { styled } from 'styled-components'
 import { RefObject } from 'react'
 
 import Slot from './Slot'
+import Button from './Button'
 
 import {
     removeValueAtIndex,
@@ -15,13 +16,13 @@ import { ISlotValue } from '../data/models'
 
 const Wrapper = styled.section`
     width: fit-content;
-    background-color: #071b25;
+    background-color: var(--color-background-50);
     border-width: 1px;
     border-style: solid;
-    border-bottom-color: black;
-    border-right-color: black;
-    border-left-color: #39444b;
-    border-top-color: #39444b;
+    border-bottom-color: var(--color-utility-0);
+    border-right-color: var(--color-utility-0);
+    border-left-color: var(--color-utility-60);
+    border-top-color: var(--color-utility-60);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -38,28 +39,6 @@ const Slots = styled.div`
 const ButtonGroup = styled.div`
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-`
-
-const Button = styled.button`
-    appearance: none;
-    background-color: #16232b;
-    border-width: 1px;
-    border-style: solid;
-    border-bottom-color: black;
-    border-right-color: black;
-    border-left-color: #39444b;
-    border-top-color: #39444b;
-    color: #e1bb34;
-    box-sizing: border-box;
-    width: 2rem;
-    height: 2rem;
-    cursor: pointer;
-
-    svg {
-        width: 1rem;
-        height: 1rem;
-        object-fit: contain;
-    }
 `
 
 interface IBarProps {
@@ -110,16 +89,28 @@ const Bar = ({ id, slots, total, setSlots, slotsRef }: IBarProps) => {
                     {id === 0 ? (
                         <span></span>
                     ) : (
-                        <Button onClick={onClickUp}>
-                            <ChevronUp />
-                        </Button>
+                        <Button
+                            onClick={onClickUp}
+                            icon={ChevronUp}
+                            text={'Shift Bar Up'}
+                            $hideText={true}
+                            $background={'light'}
+                            $padding={'narrow'}
+                            $size={'small'}
+                        />
                     )}
                     {slotsRef.current && slotsRef.current.length - 1 === id ? (
                         <span></span>
                     ) : (
-                        <Button onClick={onClickDown}>
-                            <ChevronDown />
-                        </Button>
+                        <Button
+                            onClick={onClickDown}
+                            icon={ChevronDown}
+                            text={'Shift Bar Down'}
+                            $hideText={true}
+                            $background={'light'}
+                            $padding={'narrow'}
+                            $size={'small'}
+                        />
                     )}
                 </ButtonGroup>
             )}
@@ -136,13 +127,25 @@ const Bar = ({ id, slots, total, setSlots, slotsRef }: IBarProps) => {
                 ))}
             </Slots>
             <ButtonGroup>
-                <Button onClick={onClickReset}>
-                    <RefreshIcon />
-                </Button>
+                <Button
+                    onClick={onClickReset}
+                    icon={RefreshIcon}
+                    text={'Reset Bar'}
+                    $hideText={true}
+                    $background={'light'}
+                    $padding={'narrow'}
+                    $size={'small'}
+                />
                 {total == 1 ? null : (
-                    <Button onClick={onClickDelete}>
-                        <TrashIcon />
-                    </Button>
+                    <Button
+                        onClick={onClickDelete}
+                        icon={TrashIcon}
+                        text={'Delete Bar'}
+                        $hideText={true}
+                        $background={'light'}
+                        $padding={'narrow'}
+                        $size={'small'}
+                    />
                 )}
             </ButtonGroup>
         </Wrapper>

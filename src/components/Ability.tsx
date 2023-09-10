@@ -29,14 +29,14 @@ const Wrapper = styled.div<IAbilityWrapperProps>`
     ${({ $size, $frame }) => {
         if ($size === 'large') {
             return `
-                border: ${$frame ? '1px solid #39444b' : 'none'} 
+                border: ${$frame ? '1px solid var(--color-utility-60)' : 'none'};
                 width: ${$frame ? '42px' : '40px'};
                 height: ${$frame ? '42px' : '40px'};
             `
         }
 
         return `
-            border: ${$frame ? '1px solid #39444b' : 'none'} 
+            border: ${$frame ? '1px solid var(--color-utility-60)' : 'none'};
             width: ${$frame ? '32px' : '30px'};
             height: ${$frame ? '32px' : '30px'};
         `

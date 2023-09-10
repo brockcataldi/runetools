@@ -9,11 +9,6 @@ const currentDragParentAtom = atom<string | null>({
     default: null,
 })
 
-// const barsAtom = atom<ISlotValue[][]>({
-//     key: 'bars',
-//     default: [new Array(14).fill(null)],
-// })
-
 const abilitiesAtom = atom<IAbilityMap>({
     key: 'abilities',
     default: abilities,
@@ -26,10 +21,10 @@ const abilitiesTypeExclusionAtom = atom<string[]>({
 
 const abilitiesTypes = selector({
     key: 'abilityTypes',
-    get: ({get}) => {
-        const abilities = get(abilitiesAtom);
-        return Object.keys(abilities);
-    }
+    get: ({ get }) => {
+        const abilities = get(abilitiesAtom)
+        return Object.keys(abilities)
+    },
 })
 
 const filteredAbilitiesSelector = selector({
@@ -50,7 +45,6 @@ const filteredAbilitiesSelector = selector({
 })
 
 export {
-    // barsAtom,
     currentDragParentAtom,
     abilitiesAtom,
     abilitiesTypes,

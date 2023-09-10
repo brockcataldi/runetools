@@ -7,7 +7,7 @@ import { Draggable } from 'gsap/Draggable'
 
 gsap.registerPlugin(Draggable)
 
-import GlobalStyle from './GlobalStyle.tsx'
+import GlobalStyle from './components/GlobalStyle.tsx'
 
 import RootRoute from './routes/RootRoute.tsx'
 import IndexRoute from './routes/IndexRoute.tsx'
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
             {
                 path: 'abilities',
                 element: <AbilitiesRoute />,
-            }
+            },
         ],
     },
 ])
