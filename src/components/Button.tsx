@@ -4,7 +4,7 @@ import { styled } from 'styled-components'
 import Descriptor, { IDescriptorProps } from './Descriptor'
 
 interface IButtonWrapperProps {
-    $padding?: 'default' | 'narrow' 
+    $padding?: 'default' | 'narrow'
 
     $hideText?: boolean
     $size?: 'default' | 'small'
@@ -26,11 +26,9 @@ const Wrapper = styled.button<IButtonWrapperProps>`
     cursor: pointer;
 
     ${({ $padding }) => {
-        return `padding: ${ 
-            $padding === 'default' || $padding === undefined 
-                ? '0.5rem 1rem' 
-                : '0.5rem' 
-        };`;
+        return `padding: ${
+            $padding === 'default' || $padding === undefined ? '0.5rem 1rem' : '0.5rem'
+        };`
     }}
 
     ${({ $background }) => {
@@ -49,13 +47,12 @@ const Wrapper = styled.button<IButtonWrapperProps>`
         object-fit: contain;
 
         ${({ $size }) => {
-            return $size === 'default' || $size === undefined 
+            return $size === 'default' || $size === undefined
                 ? `
                     width: 1.2rem;
                     height: 1.2rem;
                 `
-                :
-                `
+                : `
                     width: 1rem;
                     height: 1rem;
                 `
@@ -92,8 +89,7 @@ interface IButtonProps extends IDescriptorProps, IButtonWrapperProps {
 }
 
 const Button = (props: IButtonProps) => {
-
-    const { icon, text, onClick, ...$styles } = props;
+    const { icon, text, onClick, ...$styles } = props
 
     return (
         <Wrapper onClick={onClick} {...$styles}>

@@ -80,7 +80,7 @@ const Aside = ({ slotsRef, setSlots }: IAsideProps) => {
                     <Accordion
                         key={`accordion-${key}`}
                         title={capitalize(key)}
-                        icon={`/skills/${key}_abilities_icon.webp`}
+                        icon={`/menu-items/${key}_abilities_icon.webp`}
                         $current={dragParent === key}
                     >
                         <AbilityList

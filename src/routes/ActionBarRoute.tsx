@@ -37,7 +37,7 @@ const Wrapper = styled.div`
     gap: 1rem;
 `
 
-const AbilitiesRoute = () => {
+const ActionBarRoute = () => {
     const types = useRecoilValue(abilitiesTypes)
     const abilities = useRecoilValue(abilitiesAtom)
     const [search, setSearch] = useSearchParams()
@@ -92,4 +92,4 @@ const AbilitiesRoute = () => {
     )
 }
 
-export default AbilitiesRoute
+export default ActionBarRoute

@@ -25,6 +25,7 @@ const Wrapper = styled.div<IAbilityWrapperProps>`
     display: block;
     box-sizing: border-box;
     padding: 0;
+    position: static;
 
     ${({ $size, $frame }) => {
         if ($size === 'large') {
@@ -61,7 +62,6 @@ const Image = styled.img<IAbilitySizeProps>`
         `
     }}
 `
-
 interface IAbilityProps extends IAbilityWrapperProps {
     inSlot: boolean
     bar: number | null
@@ -131,7 +131,9 @@ const Ability = ({
     }
 
     const onDragStart = () => {
-        setCurrentDragParent(ability.skill)
+        if (!inSlot) {
+            setCurrentDragParent(ability.skill)
+        }
     }
 
     useLayoutEffect(() => {
