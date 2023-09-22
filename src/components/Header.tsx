@@ -41,7 +41,7 @@ const Header: FunctionComponent<IHeaderProps> = ({ children }: IHeaderProps) => 
     return (
         <Wrapper>
             <TitleLink href={'/'}>
-                <Title>RuneTools</Title>
+                <Title>Rune Tools</Title>
             </TitleLink>
 
             {children !== undefined ? <Content>{children}</Content> : null}

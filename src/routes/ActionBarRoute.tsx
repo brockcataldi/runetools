@@ -20,8 +20,8 @@ const Container = styled.div``
 const Main = styled.main`
     position: absolute;
     top: 74px;
-    left: 0;
-    right: 20rem;
+    right: 0;
+    left: 20rem;
     bottom: 0;
     background-color: var(--color-background-30);
     z-index: 0;
@@ -70,6 +70,7 @@ const ActionBarRoute = () => {
                     $background={'light'}
                 />
             </Header>
+            <Aside setSlots={setBars} slotsRef={barsRef} />
             <Main>
                 <Wrapper>
                     {bars.map((slots, index) => (
@@ -87,7 +88,6 @@ const ActionBarRoute = () => {
                     ) : null}
                 </Wrapper>
             </Main>
-            <Aside setSlots={setBars} slotsRef={barsRef} />
         </Container>
     )
 }

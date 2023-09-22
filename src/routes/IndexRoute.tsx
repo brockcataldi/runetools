@@ -65,7 +65,7 @@ const IndexRoute = () => {
     return (
         <Container>
             <Wrapper>
-                <Title>RuneTools</Title>
+                <Title>Rune Tools</Title>
                 <Deck>
                     <Card href={'rs3/action-bar/'}>
                         <Descriptor

@@ -18,7 +18,7 @@ const Wrapper = styled.aside`
     width: 20rem;
     height: calc(100vh - 74px);
     top: 74px;
-    right: 0;
+    left: 0;
     background-color: var(--color-background-50);
     box-shadow: -2px 0px 3px black;
     z-index: 1;
