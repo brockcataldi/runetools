@@ -15,7 +15,8 @@ import { currentDragParentAtom, filteredAbilitiesSelector } from '../data/atoms'
 
 const Wrapper = styled.aside`
     position: fixed;
-    width: 20rem;
+    width: 100%;
+    max-width: 20.5rem;
     height: calc(100vh - 74px);
     top: 74px;
     left: 0;
