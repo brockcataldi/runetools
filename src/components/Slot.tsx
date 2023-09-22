@@ -1,7 +1,6 @@
-import { RefObject } from 'react'
 import { styled } from 'styled-components'
 
-import { ISlotValue } from '../data/models'
+import { ISlotValue, IHasSlotsData } from '../data/models'
 import Ability from './Ability'
 
 const Wrapper = styled.button`
@@ -15,15 +14,13 @@ const Wrapper = styled.button`
     background-color: transparent;
 `
 
-interface ISlotProps {
+interface ISlotProps extends IHasSlotsData {
     ability: ISlotValue
     bar: number
     index: number
-    slotsRef: RefObject<ISlotValue[][]>
-    setSlots: (slots: ISlotValue[][]) => void
 }
 
-const Slot = ({ ability, bar, index, setSlots, slotsRef }: ISlotProps) => {
+const Slot = ({ ability, bar, index, ...props }: ISlotProps) => {
     return (
         <Wrapper className={`slot sid-${bar}-${index}`}>
             {ability === null ? null : (
@@ -33,9 +30,7 @@ const Slot = ({ ability, bar, index, setSlots, slotsRef }: ISlotProps) => {
                     ability={ability}
                     bar={bar}
                     index={index}
-                    inSlot={true}
-                    setSlots={setSlots}
-                    slotsRef={slotsRef}
+                    {...props}
                 />
             )}
         </Wrapper>

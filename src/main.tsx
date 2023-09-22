@@ -7,11 +7,12 @@ import { Draggable } from 'gsap/Draggable'
 
 gsap.registerPlugin(Draggable)
 
-import GlobalStyle from './components/GlobalStyle.tsx'
 import RootRoute from './routes/RootRoute.tsx'
 import IndexRoute from './routes/IndexRoute.tsx'
 import ActionBarRoute from './routes/ActionBarRoute.tsx'
 import ErrorRoute from './routes/ErrorRoute.tsx'
+
+import GlobalStyle from './components/GlobalStyle.tsx'
 
 const router = createBrowserRouter([
     {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
                 element: <IndexRoute />,
             },
             {
-                path: 'action-bar',
+                path: 'rs3/action-bar',
                 element: <ActionBarRoute />,
             },
         ],

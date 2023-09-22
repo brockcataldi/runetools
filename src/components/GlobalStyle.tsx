@@ -1,10 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
 
-// Colors
-// #16232b - Background 10
-// #071b25 - Background 50
-// #010b10 - Background 100
-
 const GlobalStyle = createGlobalStyle`
   :root{
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";

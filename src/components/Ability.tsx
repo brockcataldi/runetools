@@ -4,14 +4,11 @@ import { gsap } from 'gsap'
 import { Draggable } from 'gsap/Draggable'
 import { useSetRecoilState } from 'recoil'
 
-import {
-    getClassStartsWith,
-    replaceValueAtIndex2D,
-    swapValuesAtIndexes2D,
-} from '../utilities/Utilities'
+import { replaceValueAtIndex2D, swapValuesAtIndexes2D } from '../utilities/Utilities'
 
 import { IAbility, ISlotValue } from '../data/models'
 import { currentDragParentAtom } from '../data/atoms'
+import getSlotId from '../utilities/getSlotId'
 
 interface IAbilitySizeProps {
     $size?: 'small' | 'large'
@@ -63,7 +60,6 @@ const Image = styled.img<IAbilitySizeProps>`
     }}
 `
 interface IAbilityProps extends IAbilityWrapperProps {
-    inSlot: boolean
     bar: number | null
     index: number
     ability: IAbility
@@ -75,7 +71,6 @@ const Ability = ({
     $frame,
     $size = 'small',
     ability,
-    inSlot,
     bar,
     setSlots,
     slotsRef,
@@ -83,55 +78,60 @@ const Ability = ({
 }: IAbilityProps) => {
     const elementRef = useRef<HTMLDivElement>(null)
     const draggableInstance = useRef<Draggable[] | null>(null)
-
     const setCurrentDragParent = useSetRecoilState(currentDragParentAtom)
 
-    const testSlot = (slot: Element) => {
-        if (!Draggable.hitTest(elementRef.current, slot, 20) || !slotsRef.current) {
-            return
-        }
-
-        const targetSid = getClassStartsWith(slot.classList, 'sid')
-
-        if (targetSid === false) {
-            return
-        }
-
-        const [, targetBarString, targetIndexString]: string[] = targetSid.split('-')
-
-        const targetBar: number = Number(targetBarString)
-        const targetIndex: number = Number(targetIndexString)
-
-        if (inSlot && bar !== null) {
-            setSlots(swapValuesAtIndexes2D(slotsRef.current, targetIndex, targetBar, index, bar))
-        } else {
-            setSlots(replaceValueAtIndex2D(slotsRef.current, ability, targetIndex, targetBar))
+    const reset = () => {
+        if(elementRef.current){
+            gsap.set(elementRef.current, {
+                x: 0,
+                y: 0,
+            })
         }
     }
 
     const onDragEnd = () => {
-        if (!elementRef.current) {
-            return
-        }
 
         const slotElements = document.querySelectorAll('.slot')
 
-        if (slotElements === null) {
+        if (!elementRef.current || !slotsRef.current || !slotElements) {
             return
         }
 
-        slotElements.forEach(testSlot)
+        const targetSlot = Array.from(slotElements).find((slotElement) =>
+            Draggable.hitTest(elementRef.current, slotElement, 20),
+        )
 
-        gsap.set(elementRef.current, {
-            x: 0,
-            y: 0,
-        })
+        if (targetSlot === undefined) {
 
+            if(bar !== null){
+                setSlots(replaceValueAtIndex2D(slotsRef.current, null, index, bar))
+                return;
+            }
+
+            reset();
+            return
+        }
+
+        const slotId = getSlotId(targetSlot.classList)
+
+        if (slotId === false) {
+            reset();
+            return
+        }
+
+        const [slotBar, slotIndex] = slotId
+
+        setSlots(
+            bar !== null
+                ? swapValuesAtIndexes2D(slotsRef.current, slotIndex, slotBar, index, bar)
+                : replaceValueAtIndex2D(slotsRef.current, ability, slotIndex, slotBar),
+        )
         setCurrentDragParent(null)
+        reset();
     }
 
     const onDragStart = () => {
-        if (!inSlot) {
+        if (bar === null) {
             setCurrentDragParent(ability.skill)
         }
     }

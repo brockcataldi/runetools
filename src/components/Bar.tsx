@@ -1,5 +1,4 @@
 import { styled } from 'styled-components'
-import { RefObject } from 'react'
 
 import Slot from './Slot'
 import Button from './Button'
@@ -12,7 +11,7 @@ import {
 
 import { TrashIcon, RefreshIcon, ChevronUp, ChevronDown } from '../vectors/vectors'
 
-import { ISlotValue } from '../data/models'
+import { ISlotValue, IHasSlotsData } from '../data/models'
 
 const Wrapper = styled.section`
     width: fit-content;
@@ -41,12 +40,10 @@ const ButtonGroup = styled.div`
     grid-template-rows: repeat(2, 1fr);
 `
 
-interface IBarProps {
+interface IBarProps extends IHasSlotsData {
     id: number
     total: number
     slots: ISlotValue[]
-    setSlots: (slots: ISlotValue[][]) => void
-    slotsRef: RefObject<ISlotValue[][]>
 }
 
 const Bar = ({ id, slots, total, setSlots, slotsRef }: IBarProps) => {

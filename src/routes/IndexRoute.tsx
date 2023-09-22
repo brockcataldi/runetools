@@ -67,7 +67,7 @@ const IndexRoute = () => {
             <Wrapper>
                 <Title>RuneTools</Title>
                 <Deck>
-                    <Card href={'/action-bar/'}>
+                    <Card href={'rs3/action-bar/'}>
                         <Descriptor
                             icon={'/menu-items/powers_icon.webp'}
                             text={'Action Bar Editor'}
