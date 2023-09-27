@@ -5,7 +5,6 @@ import Descriptor, { IDescriptorProps } from './Descriptor'
 
 interface IButtonWrapperProps {
     $padding?: 'default' | 'narrow'
-
     $hideText?: boolean
     $size?: 'default' | 'small'
     $background?: 'default' | 'dark' | 'light'

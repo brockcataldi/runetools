@@ -17,12 +17,12 @@ const Wrapper = styled.aside`
     position: fixed;
     width: 100%;
     max-width: 20.5rem;
-    height: calc(100vh - 74px);
-    top: 74px;
-    left: 0;
+    height: calc(100vh - 72px);
+    top: 72px;
+    right: 0;
     background-color: var(--color-background-50);
     box-shadow: -2px 0px 3px black;
-    z-index: 1;
+    z-index: 0;
     overflow-y: auto;
 `
 
@@ -69,6 +69,12 @@ const Aside = ({ slotsRef, setSlots }: IAsideProps) => {
         }
     }, [dragParent])
 
+    const handleAccordionOpen = (panelRef: RefObject<HTMLDivElement>) => {
+        if (!panelRef.current || !ref.current) {
+            return
+        }
+    }
+
     return (
         <Wrapper ref={ref}>
             <Header>
@@ -83,6 +89,7 @@ const Aside = ({ slotsRef, setSlots }: IAsideProps) => {
                         title={capitalize(key)}
                         icon={`/menu-items/${key}_abilities_icon.webp`}
                         $current={dragParent === key}
+                        onOpen={handleAccordionOpen}
                     >
                         <AbilityList
                             skill={key}

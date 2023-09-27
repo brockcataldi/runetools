@@ -31,7 +31,12 @@ const Title = styled.h1`
     margin: 0;
 `
 
-const Content = styled.div``
+const Content = styled.div`
+    display: flex;
+    place-content: center;
+    gap: 1rem;
+    flex-direction: row;
+`
 
 interface IHeaderProps {
     children?: ReactElement | ReactElement[]

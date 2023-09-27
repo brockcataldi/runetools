@@ -25,7 +25,7 @@ const router = createBrowserRouter([
                 element: <IndexRoute />,
             },
             {
-                path: 'rs3/action-bar',
+                path: 'action-bar',
                 element: <ActionBarRoute />,
             },
         ],

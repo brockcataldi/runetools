@@ -40,13 +40,13 @@ const ButtonGroup = styled.div`
     grid-template-rows: repeat(2, 1fr);
 `
 
-interface IBarProps extends IHasSlotsData {
+interface IActionBarProps extends IHasSlotsData {
     id: number
     total: number
     slots: ISlotValue[]
 }
 
-const Bar = ({ id, slots, total, setSlots, slotsRef }: IBarProps) => {
+const ActionBar = ({ id, slots, total, setSlots, slotsRef }: IActionBarProps) => {
     const onClickReset = () => {
         if (!slotsRef.current) {
             return
@@ -89,7 +89,7 @@ const Bar = ({ id, slots, total, setSlots, slotsRef }: IBarProps) => {
                         <Button
                             onClick={onClickUp}
                             icon={ChevronUp}
-                            text={'Shift Bar Up'}
+                            text={'Shift the Action Bar Up'}
                             $hideText={true}
                             $background={'light'}
                             $padding={'narrow'}
@@ -102,7 +102,7 @@ const Bar = ({ id, slots, total, setSlots, slotsRef }: IBarProps) => {
                         <Button
                             onClick={onClickDown}
                             icon={ChevronDown}
-                            text={'Shift Bar Down'}
+                            text={'Shift the Action Bar Down'}
                             $hideText={true}
                             $background={'light'}
                             $padding={'narrow'}
@@ -127,7 +127,7 @@ const Bar = ({ id, slots, total, setSlots, slotsRef }: IBarProps) => {
                 <Button
                     onClick={onClickReset}
                     icon={RefreshIcon}
-                    text={'Reset Bar'}
+                    text={'Reset the Action Bar'}
                     $hideText={true}
                     $background={'light'}
                     $padding={'narrow'}
@@ -137,7 +137,7 @@ const Bar = ({ id, slots, total, setSlots, slotsRef }: IBarProps) => {
                     <Button
                         onClick={onClickDelete}
                         icon={TrashIcon}
-                        text={'Delete Bar'}
+                        text={'Delete the Action Bar'}
                         $hideText={true}
                         $background={'light'}
                         $padding={'narrow'}
@@ -149,4 +149,4 @@ const Bar = ({ id, slots, total, setSlots, slotsRef }: IBarProps) => {
     )
 }
 
-export default Bar
+export default ActionBar

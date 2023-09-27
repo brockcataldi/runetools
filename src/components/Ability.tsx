@@ -23,6 +23,7 @@ const Wrapper = styled.div<IAbilityWrapperProps>`
     box-sizing: border-box;
     padding: 0;
     position: static;
+    z-index: 0;
 
     ${({ $size, $frame }) => {
         if ($size === 'large') {
@@ -81,7 +82,7 @@ const Ability = ({
     const setCurrentDragParent = useSetRecoilState(currentDragParentAtom)
 
     const reset = () => {
-        if(elementRef.current){
+        if (elementRef.current) {
             gsap.set(elementRef.current, {
                 x: 0,
                 y: 0,
@@ -90,7 +91,6 @@ const Ability = ({
     }
 
     const onDragEnd = () => {
-
         const slotElements = document.querySelectorAll('.slot')
 
         if (!elementRef.current || !slotsRef.current || !slotElements) {
@@ -102,20 +102,19 @@ const Ability = ({
         )
 
         if (targetSlot === undefined) {
-
-            if(bar !== null){
+            if (bar !== null) {
                 setSlots(replaceValueAtIndex2D(slotsRef.current, null, index, bar))
-                return;
+                return
             }
 
-            reset();
+            reset()
             return
         }
 
         const slotId = getSlotId(targetSlot.classList)
 
         if (slotId === false) {
-            reset();
+            reset()
             return
         }
 
@@ -127,7 +126,7 @@ const Ability = ({
                 : replaceValueAtIndex2D(slotsRef.current, ability, slotIndex, slotBar),
         )
         setCurrentDragParent(null)
-        reset();
+        reset()
     }
 
     const onDragStart = () => {

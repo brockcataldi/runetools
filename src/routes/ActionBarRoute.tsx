@@ -4,11 +4,11 @@ import { useEffect } from 'react'
 import { useRecoilValue } from 'recoil'
 
 import Aside from '../components/Aside'
-import Bar from '../components/Bar'
+import ActionBar from '../components/ActionBar'
 import Header from '../components/Header'
 import Button from '../components/Button'
 
-import { PlusIcon, ShareIcon } from '../vectors/vectors'
+import { PlusIcon, ShareIcon, SettingsIcon } from '../vectors/vectors'
 
 import { fromStorable, toStorable, useStateRef } from '../utilities/Utilities'
 
@@ -20,8 +20,8 @@ const Container = styled.div``
 const Main = styled.main`
     position: absolute;
     top: 74px;
-    right: 0;
-    left: 20rem;
+    left: 0;
+    right: 20.5rem;
     bottom: 0;
     background-color: var(--color-background-30);
     z-index: 0;
@@ -57,7 +57,7 @@ const ActionBarRoute = () => {
     }
 
     const onClickShare = () => {
-        console.log('share clicked')
+        navigator.clipboard.writeText(window.location.href)
     }
 
     return (
@@ -69,12 +69,17 @@ const ActionBarRoute = () => {
                     onClick={onClickShare}
                     $background={'light'}
                 />
+                <Button
+                    icon={SettingsIcon}
+                    text={'Settings'}
+                    onClick={onClickShare}
+                    $background={'light'}
+                />
             </Header>
-            <Aside setSlots={setBars} slotsRef={barsRef} />
             <Main>
                 <Wrapper>
                     {bars.map((slots, index) => (
-                        <Bar
+                        <ActionBar
                             key={`bar-${index}`}
                             id={index}
                             slots={slots}
@@ -88,6 +93,7 @@ const ActionBarRoute = () => {
                     ) : null}
                 </Wrapper>
             </Main>
+            <Aside setSlots={setBars} slotsRef={barsRef} />
         </Container>
     )
 }

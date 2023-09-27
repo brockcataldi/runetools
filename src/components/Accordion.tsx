@@ -1,4 +1,11 @@
-import { useLayoutEffect, useState, useRef, FunctionComponent, ReactElement } from 'react'
+import {
+    useLayoutEffect,
+    useState,
+    useRef,
+    FunctionComponent,
+    ReactElement,
+    RefObject,
+} from 'react'
 import { styled } from 'styled-components'
 import { gsap } from 'gsap'
 
@@ -79,6 +86,7 @@ interface IAccordionProps extends IAccordionPanelProps {
     title: string
     icon: string
     children?: ReactElement | ReactElement[]
+    onOpen: (panelRef: RefObject<HTMLDivElement>) => void
 }
 
 const Accordion: FunctionComponent<IAccordionProps> = ({
@@ -86,6 +94,7 @@ const Accordion: FunctionComponent<IAccordionProps> = ({
     icon,
     children,
     $current,
+    onOpen,
 }: IAccordionProps) => {
     const panelRef = useRef<HTMLDivElement>(null)
     const chevronRef = useRef<HTMLElement>(null)
@@ -126,6 +135,10 @@ const Accordion: FunctionComponent<IAccordionProps> = ({
     }, [open])
 
     const handleClick = () => {
+        if (open === false) {
+            onOpen(panelRef)
+        }
+
         setOpen(!open)
     }
 
