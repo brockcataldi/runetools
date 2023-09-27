@@ -1,5 +1,5 @@
 import { styled } from 'styled-components'
-import Descriptor from '../components/Descriptor'
+import Descriptor from '../components/Descriptor/Descriptor'
 
 const Container = styled.main`
     max-width: 400px;

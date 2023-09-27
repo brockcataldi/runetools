@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { useRecoilState } from 'recoil'
 
-import { abilitiesTypeExclusionAtom } from '../data/atoms'
+import { abilitiesTypeExclusionAtom } from '../../data/atoms'
 
-import Toggle from './Toggle'
+import Toggle from '../Toggle/Toggle'
 
 const AsideFilter = () => {
     const [exclusions, setExclusions] = useRecoilState(abilitiesTypeExclusionAtom)

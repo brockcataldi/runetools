@@ -1,66 +1,19 @@
+
+
 import { useLayoutEffect, useRef, RefObject } from 'react'
-import { styled } from 'styled-components'
 import { gsap } from 'gsap'
 import { Draggable } from 'gsap/Draggable'
 import { useSetRecoilState } from 'recoil'
 
-import { replaceValueAtIndex2D, swapValuesAtIndexes2D } from '../utilities/Utilities'
+import { Wrapper, Image, IWrapperProps } from './Ability.elements'
 
-import { IAbility, ISlotValue } from '../data/models'
-import { currentDragParentAtom } from '../data/atoms'
-import getSlotId from '../utilities/getSlotId'
+import { replaceValueAtIndex2D, swapValuesAtIndexes2D } from '../../utilities/Utilities'
 
-interface IAbilitySizeProps {
-    $size?: 'small' | 'large'
-}
+import { IAbility, ISlotValue } from '../../data/models'
+import { currentDragParentAtom } from '../../data/atoms'
+import getSlotId from '../../utilities/getSlotId'
 
-interface IAbilityWrapperProps extends IAbilitySizeProps {
-    $frame: boolean
-}
-
-const Wrapper = styled.div<IAbilityWrapperProps>`
-    display: block;
-    box-sizing: border-box;
-    padding: 0;
-    position: static;
-    z-index: 0;
-
-    ${({ $size, $frame }) => {
-        if ($size === 'large') {
-            return `
-                border: ${$frame ? '1px solid var(--color-utility-60)' : 'none'};
-                width: ${$frame ? '42px' : '40px'};
-                height: ${$frame ? '42px' : '40px'};
-            `
-        }
-
-        return `
-            border: ${$frame ? '1px solid var(--color-utility-60)' : 'none'};
-            width: ${$frame ? '32px' : '30px'};
-            height: ${$frame ? '32px' : '30px'};
-        `
-    }}
-`
-
-const Image = styled.img<IAbilitySizeProps>`
-    display: block;
-    object-fit: contain;
-
-    ${({ $size }) => {
-        if ($size === 'large') {
-            return `
-                width: 40px;
-                height: 40px;
-            `
-        }
-
-        return `
-            width: 30px;
-            height: 30px;
-        `
-    }}
-`
-interface IAbilityProps extends IAbilityWrapperProps {
+interface IAbilityProps extends IWrapperProps {
     bar: number | null
     index: number
     ability: IAbility

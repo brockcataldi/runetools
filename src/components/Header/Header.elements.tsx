@@ -1,4 +1,3 @@
-import { FunctionComponent, ReactElement } from 'react'
 import { styled } from 'styled-components'
 
 const Wrapper = styled.header`
@@ -38,20 +37,4 @@ const Content = styled.div`
     flex-direction: row;
 `
 
-interface IHeaderProps {
-    children?: ReactElement | ReactElement[]
-}
-
-const Header: FunctionComponent<IHeaderProps> = ({ children }: IHeaderProps) => {
-    return (
-        <Wrapper>
-            <TitleLink href={'/'}>
-                <Title>Rune Tools</Title>
-            </TitleLink>
-
-            {children !== undefined ? <Content>{children}</Content> : null}
-        </Wrapper>
-    )
-}
-
-export default Header
+export { Wrapper, TitleLink, Title, Content }

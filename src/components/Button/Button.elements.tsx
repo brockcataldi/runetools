@@ -1,16 +1,15 @@
-import { MouseEvent } from 'react'
 import { styled } from 'styled-components'
 
-import Descriptor, { IDescriptorProps } from './Descriptor'
+import Descriptor from '../Descriptor/Descriptor'
 
-interface IButtonWrapperProps {
+interface IWrapperProps {
     $padding?: 'default' | 'narrow'
     $hideText?: boolean
     $size?: 'default' | 'small'
     $background?: 'default' | 'dark' | 'light'
 }
 
-const Wrapper = styled.button<IButtonWrapperProps>`
+const Wrapper = styled.button<IWrapperProps>`
     appearance: none;
     border-width: 1px;
     border-style: solid;
@@ -83,18 +82,5 @@ const Wrapper = styled.button<IButtonWrapperProps>`
     }
 `
 
-interface IButtonProps extends IDescriptorProps, IButtonWrapperProps {
-    onClick: (event: MouseEvent<HTMLButtonElement>) => void
-}
-
-const Button = (props: IButtonProps) => {
-    const { icon, text, onClick, ...$styles } = props
-
-    return (
-        <Wrapper onClick={onClick} {...$styles}>
-            <Descriptor icon={icon} text={text} />
-        </Wrapper>
-    )
-}
-
-export default Button
+export { Wrapper }
+export type { IWrapperProps }

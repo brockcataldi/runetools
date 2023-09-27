@@ -1,44 +1,17 @@
-import { styled } from 'styled-components'
-
-import Slot from './Slot'
-import Button from './Button'
+import { Wrapper, Slots, Group } from './ActionBar.elements'
+import Slot from '../Slot/Slot'
+import Button from '../Button/Button'
 
 import {
     removeValueAtIndex,
     replaceValueAtIndex,
     swapValuesAtIndexes,
-} from '../utilities/Utilities'
+} from '../../utilities/Utilities'
 
-import { TrashIcon, RefreshIcon, ChevronUp, ChevronDown } from '../vectors/vectors'
+import { TrashIcon, RefreshIcon, ChevronUp, ChevronDown } from '../../vectors/vectors'
 
-import { ISlotValue, IHasSlotsData } from '../data/models'
+import { ISlotValue, IHasSlotsData } from '../../data/models'
 
-const Wrapper = styled.section`
-    width: fit-content;
-    background-color: var(--color-background-50);
-    border-width: 1px;
-    border-style: solid;
-    border-bottom-color: var(--color-utility-0);
-    border-right-color: var(--color-utility-0);
-    border-left-color: var(--color-utility-60);
-    border-top-color: var(--color-utility-60);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0.5rem;
-`
-
-const Slots = styled.div`
-    display: grid;
-    grid-template-columns: repeat(14, 42px);
-    gap: 0.5rem;
-    margin: 0 1rem;
-`
-
-const ButtonGroup = styled.div`
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-`
 
 interface IActionBarProps extends IHasSlotsData {
     id: number
@@ -82,7 +55,7 @@ const ActionBar = ({ id, slots, total, setSlots, slotsRef }: IActionBarProps) =>
     return (
         <Wrapper>
             {total === 1 ? null : (
-                <ButtonGroup>
+                <Group>
                     {id === 0 ? (
                         <span></span>
                     ) : (
@@ -109,7 +82,7 @@ const ActionBar = ({ id, slots, total, setSlots, slotsRef }: IActionBarProps) =>
                             $size={'small'}
                         />
                     )}
-                </ButtonGroup>
+                </Group>
             )}
             <Slots>
                 {slots.map((slot, index) => (
@@ -123,7 +96,7 @@ const ActionBar = ({ id, slots, total, setSlots, slotsRef }: IActionBarProps) =>
                     />
                 ))}
             </Slots>
-            <ButtonGroup>
+            <Group>
                 <Button
                     onClick={onClickReset}
                     icon={RefreshIcon}
@@ -144,7 +117,7 @@ const ActionBar = ({ id, slots, total, setSlots, slotsRef }: IActionBarProps) =>
                         $size={'small'}
                     />
                 )}
-            </ButtonGroup>
+            </Group>
         </Wrapper>
     )
 }

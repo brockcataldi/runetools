@@ -1,16 +1,9 @@
-import { styled } from 'styled-components'
 
-import Ability from './Ability'
+import Ability from '../Ability/Ability'
 
-import { IAbility, IHasSlotsData } from '../data/models'
+import { IAbility, IHasSlotsData } from '../../data/models'
 
-const Wrapper = styled.div`
-    display: grid;
-    grid-template-columns: repeat(6, 32px);
-    gap: 1rem;
-    width: 274px;
-    margin: 0 auto;
-`
+import { Wrapper } from './AbilityList.elements'
 
 interface IAbilityListProps extends IHasSlotsData {
     abilities: IAbility[]

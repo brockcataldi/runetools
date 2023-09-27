@@ -3,10 +3,10 @@ import { useSearchParams } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useRecoilValue } from 'recoil'
 
-import Aside from '../components/Aside'
-import ActionBar from '../components/ActionBar'
-import Header from '../components/Header'
-import Button from '../components/Button'
+import Aside from '../components/Aside/Aside'
+import ActionBar from '../components/ActionBar/ActionBar'
+import Header from '../components/Header/Header'
+import Button from '../components/Button/Button'
 
 import { PlusIcon, ShareIcon, SettingsIcon } from '../vectors/vectors'
 

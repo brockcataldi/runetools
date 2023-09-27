@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
 
-const Field = styled.div`
+const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -44,28 +44,4 @@ const Checkmark = styled.span`
         margin-top: -4px;
     }
 `
-
-interface IToggleProps {
-    id: string
-    label: string
-    checked: boolean
-    onChange?: (value: boolean) => void
-}
-
-const Toggle = ({ id, label, checked, onChange }: IToggleProps) => {
-    const handleChange = () => {
-        if (onChange !== undefined) {
-            onChange(!checked)
-        }
-    }
-
-    return (
-        <Field>
-            <Input checked={checked} id={id} name={id} onChange={handleChange} />
-            <Checkmark onClick={handleChange} />
-            <Label htmlFor={id}>{label}</Label>
-        </Field>
-    )
-}
-
-export default Toggle
+export { Wrapper, Input, Label, Checkmark }
