@@ -11,22 +11,13 @@ const Container = styled.main`
 `
 
 const Wrapper = styled.div`
-    width: 100%;
-    padding: 2rem;
-    background-color: var(--color-background-50);
-    border-width: 1px;
-    border-style: solid;
-    border-bottom-color: var(--color-utility-0);
-    border-right-color: var(--color-utility-0);
-    border-left-color: var(--color-utility-60);
-    border-top-color: var(--color-utility-60);
+
 `
 
 const Title = styled.h1`
     font-size: 4rem;
     font-weight: 700;
     font-family: 'Cinzel', serif;
-    color: var(--color-text-50);
     margin: 0 0 1rem;
     text-align: left;
 `
@@ -66,11 +57,18 @@ const IndexRoute = () => {
         <Container>
             <Wrapper>
                 <Title>Rune Tools</Title>
+                <p>I know the Index page sucks, I'm working on it</p>
                 <Deck>
-                    <Card href={'/action-bar/'}>
+                    <Card href={'osrs/flow'}>
                         <Descriptor
-                            icon={'/menu-items/powers_icon.webp'}
-                            text={'Action Bar Editor'}
+                            icon={'/rs3/menu-items/powers_icon.webp'}
+                            text={'Flow Calculator'}
+                        />
+                    </Card>
+                    <Card href={'rs3/action-bar/'}>
+                        <Descriptor
+                            icon={'/rs3/menu-items/powers_icon.webp'}
+                            text={'Action Bar Planner'}
                         />
                     </Card>
                 </Deck>

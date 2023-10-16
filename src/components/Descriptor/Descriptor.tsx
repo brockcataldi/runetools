@@ -1,6 +1,6 @@
-import { IIcon } from '../../data/models'
+import { IIcon } from '../../routes/RS3/ActionBarRoute/data/models'
 
-import { Wrapper, Image, Text } from './Descriptor.elements';
+import { Wrapper, Image, Text } from './Descriptor.elements'
 
 interface IDescriptorProps {
     icon?: IIcon | string

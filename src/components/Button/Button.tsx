@@ -17,6 +17,6 @@ const Button = (props: IButtonProps) => {
     )
 }
 
-Button.Wrapper = Wrapper;
+Button.Wrapper = Wrapper
 
 export default Button

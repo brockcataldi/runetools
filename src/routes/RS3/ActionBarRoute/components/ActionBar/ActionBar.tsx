@@ -1,17 +1,16 @@
 import { Wrapper, Slots, Group } from './ActionBar.elements'
 import Slot from '../Slot/Slot'
-import Button from '../Button/Button'
+import Button from '../../../../../components/Button/Button'
 
 import {
     removeValueAtIndex,
     replaceValueAtIndex,
     swapValuesAtIndexes,
-} from '../../utilities/Utilities'
+} from '../../../../../utilities/Utilities'
 
-import { TrashIcon, RefreshIcon, ChevronUp, ChevronDown } from '../../vectors/vectors'
+import { TrashIcon, RefreshIcon, ChevronUp, ChevronDown } from '../../../../../vectors/vectors'
 
 import { ISlotValue, IHasSlotsData } from '../../data/models'
-
 
 interface IActionBarProps extends IHasSlotsData {
     id: number

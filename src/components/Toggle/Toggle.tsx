@@ -1,4 +1,4 @@
-import { Wrapper, Input, Checkmark, Label } from "./Toggle.elements"
+import { Wrapper, Input, Checkmark, Label } from './Toggle.elements'
 
 interface IToggleProps {
     id: string

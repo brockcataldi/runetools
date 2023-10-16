@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
 
   body, html{
     margin: 0;
-    background-color: var(--color-background-30);
+    background-color: white;
   }
 `
 

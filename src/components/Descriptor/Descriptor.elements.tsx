@@ -9,5 +9,4 @@ const Wrapper = styled.span`
 const Image = styled.img``
 const Text = styled.span``
 
-
 export { Wrapper, Image, Text }

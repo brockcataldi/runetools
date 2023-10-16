@@ -18,5 +18,4 @@ const Header: FunctionComponent<IHeaderProps> = ({ children }: IHeaderProps) => 
     )
 }
 
-
 export default Header

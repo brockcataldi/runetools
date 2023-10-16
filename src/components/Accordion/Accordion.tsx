@@ -8,7 +8,17 @@ import {
 } from 'react'
 import { gsap } from 'gsap'
 
-import { Wrapper, Heading, Trigger, Descriptor, Icon, Title, Chevron, Panel, IPanelProps } from './Accordion.elements';
+import {
+    Wrapper,
+    Heading,
+    Trigger,
+    Descriptor,
+    Icon,
+    Title,
+    Chevron,
+    Panel,
+    IPanelProps,
+} from './Accordion.elements'
 
 interface IAccordionProps extends IPanelProps {
     title: string

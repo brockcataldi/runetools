@@ -12,4 +12,4 @@ const Wrapper = styled.button`
     z-index: 0;
 `
 
-export { Wrapper };
+export { Wrapper }

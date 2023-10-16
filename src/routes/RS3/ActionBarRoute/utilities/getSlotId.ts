@@ -1,4 +1,4 @@
-import getClassStartsWith from './getClassStartsWith'
+import getClassStartsWith from '../../../../utilities/getClassStartsWith'
 
 const getSlotId = (classList: DOMTokenList): [number, number] | false => {
     const targetSid = getClassStartsWith(classList, 'sid')

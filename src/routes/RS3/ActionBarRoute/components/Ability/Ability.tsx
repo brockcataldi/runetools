@@ -1,5 +1,3 @@
-
-
 import { useLayoutEffect, useRef, RefObject } from 'react'
 import { gsap } from 'gsap'
 import { Draggable } from 'gsap/Draggable'
@@ -7,11 +5,11 @@ import { useSetRecoilState } from 'recoil'
 
 import { Wrapper, Image, IWrapperProps } from './Ability.elements'
 
-import { replaceValueAtIndex2D, swapValuesAtIndexes2D } from '../../utilities/Utilities'
+import { replaceValueAtIndex2D, swapValuesAtIndexes2D } from '../../../../../utilities/Utilities'
+import { getSlotId } from '../../utilities/Utilities'
 
 import { IAbility, ISlotValue } from '../../data/models'
 import { currentDragParentAtom } from '../../data/atoms'
-import getSlotId from '../../utilities/getSlotId'
 
 interface IAbilityProps extends IWrapperProps {
     bar: number | null
@@ -106,7 +104,7 @@ const Ability = ({
 
     return (
         <Wrapper $size={$size} $frame={$frame} ref={elementRef}>
-            <Image $size={$size} src={`/abilities/${ability.image}`} alt={ability.ability} />
+            <Image $size={$size} src={`/rs3/abilities/${ability.image}`} alt={ability.ability} />
         </Wrapper>
     )
 }

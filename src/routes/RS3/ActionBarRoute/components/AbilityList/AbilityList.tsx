@@ -1,4 +1,3 @@
-
 import Ability from '../Ability/Ability'
 
 import { IAbility, IHasSlotsData } from '../../data/models'

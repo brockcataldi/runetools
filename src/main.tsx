@@ -9,8 +9,13 @@ gsap.registerPlugin(Draggable)
 
 import RootRoute from './routes/RootRoute.tsx'
 import IndexRoute from './routes/IndexRoute.tsx'
-import ActionBarRoute from './routes/ActionBarRoute.tsx'
 import ErrorRoute from './routes/ErrorRoute.tsx'
+
+import OSRSRoute from './routes/OSRS/OSRSRoute.tsx'
+import FlowRoute from './routes/OSRS/FlowRoute/FlowRoute.tsx'
+
+import RS3Route from './routes/RS3/RS3Route.tsx'
+import ActionBarRoute from './routes/RS3/ActionBarRoute/ActionBarRoute.tsx'
 
 import GlobalStyle from './components/GlobalStyle.tsx'
 
@@ -25,7 +30,19 @@ const router = createBrowserRouter([
                 element: <IndexRoute />,
             },
             {
-                path: 'action-bar',
+                path: 'osrs',
+                element: <OSRSRoute />,
+            },
+            {
+                path: 'osrs/flow',
+                element: <FlowRoute />
+            },
+            {
+                path: 'rs3',
+                element: <RS3Route />,
+            },
+            {
+                path: 'rs3/action-bar',
                 element: <ActionBarRoute />,
             },
         ],
