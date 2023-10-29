@@ -9,16 +9,13 @@ const Wrapper = styled.div<IWrapperProps>`
     width: 204px;
     left: 100%;
 
-
     ${({ $visible }) => {
         return $visible === true
-        ? 
-        `
+            ? `
             display: inline-block;
             visiblity: visible;
         `
-        : 
-        `
+            : `
             display: none;
             visibility: hidden;
         `
@@ -37,7 +34,7 @@ const Input = styled.input.attrs({ type: 'text' })`
 const Value = styled.header`
     padding: 10px;
     background-color: white;
-`;
+`
 
 const Items = styled.ul`
     position: absolute;
@@ -55,7 +52,7 @@ const Items = styled.ul`
     overflow-y: scroll;
 `
 
-interface IItemProps{
+interface IItemProps {
     $focused: boolean
 }
 
@@ -66,7 +63,7 @@ const Item = styled.li<IItemProps>`
     border-bottom: 1px solid #d4d4d4;
 
     ${({ $focused }) => {
-        return ($focused)? `background-color: red;` : `background-color: white`;
+        return $focused ? `background-color: red;` : `background-color: white`
     }}
 `
 

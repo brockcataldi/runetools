@@ -84,7 +84,7 @@ const Wrapper = styled.button<IWrapper>`
     }}
 `
 
-const Image = styled.img``;
+const Image = styled.img``
 
 export { Wrapper, Image }
 export type { IWrapper }

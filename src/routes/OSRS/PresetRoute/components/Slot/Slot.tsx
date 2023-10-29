@@ -14,23 +14,20 @@ const Slot = ({ value, slot, onChange }: ISlot) => {
 
     return (
         <>
-            <Wrapper
-                $position={slot}
-                onClick={() => setShowAutocomplete(!showAutocomplete)}
-            >
-                {
-                    value === null ? null : (
-                        <Image src={`/osrs/equipment/${slot}/${value.image}`} alt={value.name} />
-                    )
-                }
+            <Wrapper $position={slot} onClick={() => setShowAutocomplete(!showAutocomplete)}>
+                {value === null ? null : (
+                    <Image src={`/osrs/equipment/${slot}/${value.image}`} alt={value.name} />
+                )}
             </Wrapper>
-            <Autocomplete 
-                value={value} 
-                slot={slot} 
+            <Autocomplete
+                value={value}
+                slot={slot}
                 visible={showAutocomplete}
-                onChange={onChange} 
-                onHide={() => { setShowAutocomplete(false) }}
-             />
+                onChange={onChange}
+                onHide={() => {
+                    setShowAutocomplete(false)
+                }}
+            />
         </>
     )
 }
