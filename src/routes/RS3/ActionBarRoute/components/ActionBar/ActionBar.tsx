@@ -66,6 +66,7 @@ const ActionBar = ({ id, slots, total, setSlots, slotsRef }: IActionBarProps) =>
                             $background={'light'}
                             $padding={'narrow'}
                             $size={'small'}
+                            $style={'rs3'}
                         />
                     )}
                     {slotsRef.current && slotsRef.current.length - 1 === id ? (
@@ -79,6 +80,7 @@ const ActionBar = ({ id, slots, total, setSlots, slotsRef }: IActionBarProps) =>
                             $background={'light'}
                             $padding={'narrow'}
                             $size={'small'}
+                            $style={'rs3'}
                         />
                     )}
                 </Group>
@@ -104,6 +106,7 @@ const ActionBar = ({ id, slots, total, setSlots, slotsRef }: IActionBarProps) =>
                     $background={'light'}
                     $padding={'narrow'}
                     $size={'small'}
+                    $style={'rs3'}
                 />
                 {total == 1 ? null : (
                     <Button
@@ -114,6 +117,7 @@ const ActionBar = ({ id, slots, total, setSlots, slotsRef }: IActionBarProps) =>
                         $background={'light'}
                         $padding={'narrow'}
                         $size={'small'}
+                        $style={'rs3'}
                     />
                 )}
             </Group>

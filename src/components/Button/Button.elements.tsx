@@ -2,7 +2,9 @@ import { styled } from 'styled-components'
 
 import Descriptor from '../Descriptor/Descriptor'
 
-interface IWrapperProps {
+import { ITheme } from '../../data/models'
+
+interface IWrapperProps extends ITheme {
     $padding?: 'default' | 'narrow'
     $hideText?: boolean
     $size?: 'default' | 'small'
@@ -13,11 +15,11 @@ const Wrapper = styled.button<IWrapperProps>`
     appearance: none;
     border-width: 1px;
     border-style: solid;
-    border-bottom-color: var(--color-utility-0);
-    border-right-color: var(--color-utility-0);
-    border-left-color: var(--color-utility-60);
-    border-top-color: var(--color-utility-60);
-    color: var(--color-text-50);
+    border-bottom-color: var(--rs3-color-utility-0);
+    border-right-color: var(--rs3-color-utility-0);
+    border-left-color: var(--rs3-color-utility-60);
+    border-top-color: var(--rs3-color-utility-60);
+    color: var(--rs3-color-text-50);
     box-sizing: border-box;
     display: flex;
     gap: 0.5rem;
@@ -29,14 +31,26 @@ const Wrapper = styled.button<IWrapperProps>`
         };`
     }}
 
-    ${({ $background }) => {
-        return `background-color: var(--color-background-${
-            $background === 'default' || $background === undefined
-                ? '50'
-                : $background === 'light'
-                ? '70'
-                : '30'
-        });`
+    ${({ $background, $style }) => {
+        if ($style === 'rs3') {
+            switch ($background) {
+                case 'dark':
+                    return 'background-color: var(--rs3-color-background-30);'
+                case 'light':
+                    return 'background-color: var(--rs3-color-background-70);'
+                default:
+                    return 'background-color: var(--rs3-color-background-50);'
+            }
+        } else {
+            switch ($background) {
+                case 'dark':
+                    return 'background-color: var(--rs3-color-background-30);'
+                case 'light':
+                    return 'background-color: var(--rs3-color-background-70);'
+                default:
+                    return 'background-color: var(--rs3-color-background-50);'
+            }
+        }
     }}
 
     ${Descriptor.Wrapper} svg {
@@ -64,7 +78,7 @@ const Wrapper = styled.button<IWrapperProps>`
                     font-size: 1rem;
                     font-weight: 700;
                     font-family: 'Cinzel', serif;
-                    color: var(--color-text-50);
+                    color: var(--rs3-color-text-50);
                     display: block;
                     margin: 0;
                 `

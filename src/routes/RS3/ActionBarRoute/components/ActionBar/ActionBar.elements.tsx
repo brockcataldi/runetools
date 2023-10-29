@@ -2,13 +2,13 @@ import { styled } from 'styled-components'
 
 const Wrapper = styled.section`
     width: fit-content;
-    background-color: var(--color-background-50);
+    background-color: var(--rs3-color-background-50);
     border-width: 1px;
     border-style: solid;
-    border-bottom-color: var(--color-utility-0);
-    border-right-color: var(--color-utility-0);
-    border-left-color: var(--color-utility-60);
-    border-top-color: var(--color-utility-60);
+    border-bottom-color: var(--rs3-color-utility-0);
+    border-right-color: var(--rs3-color-utility-0);
+    border-left-color: var(--rs3-color-utility-60);
+    border-top-color: var(--rs3-color-utility-60);
     display: flex;
     flex-direction: row;
     align-items: center;

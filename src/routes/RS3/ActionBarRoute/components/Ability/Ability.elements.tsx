@@ -18,14 +18,14 @@ const Wrapper = styled.div<IWrapperProps>`
     ${({ $size, $frame }) => {
         if ($size === 'large') {
             return `
-                border: ${$frame ? '1px solid var(--color-utility-60)' : 'none'};
+                border: ${$frame ? '1px solid var(--rs3-color-utility-60)' : 'none'};
                 width: ${$frame ? '42px' : '40px'};
                 height: ${$frame ? '42px' : '40px'};
             `
         }
 
         return `
-            border: ${$frame ? '1px solid var(--color-utility-60)' : 'none'};
+            border: ${$frame ? '1px solid var(--rs3-color-utility-60)' : 'none'};
             width: ${$frame ? '32px' : '30px'};
             height: ${$frame ? '32px' : '30px'};
         `

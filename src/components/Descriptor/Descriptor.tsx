@@ -1,4 +1,4 @@
-import { IIcon } from '../../routes/RS3/ActionBarRoute/data/models'
+import { IIcon } from '../../data/models'
 
 import { Wrapper, Image, Text } from './Descriptor.elements'
 

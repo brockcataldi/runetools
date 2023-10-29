@@ -1,4 +1,4 @@
-import { FunctionComponent, SVGProps, RefObject } from 'react'
+import { RefObject } from 'react'
 
 interface IAbility {
     id: number
@@ -29,8 +29,7 @@ interface ISlot {
     index: number
 }
 
-type IIcon = FunctionComponent<SVGProps<SVGSVGElement> & { title?: string | undefined }>
 type ISlotValue = IAbility | null
 type IStorable = (number[] | null)[][]
 
-export type { IAbility, IAbilityMap, IIcon, ISlot, IHasSlotsData, ISlotValue, IStorable }
+export type { IAbility, IAbilityMap, ISlot, IHasSlotsData, ISlotValue, IStorable }

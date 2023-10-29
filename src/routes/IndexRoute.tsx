@@ -1,17 +1,28 @@
 import { styled } from 'styled-components'
-import Descriptor from '../components/Descriptor/Descriptor'
+
+import LinkButton from '../components/LinkButton/LinkButton'
 
 const Container = styled.main`
-    max-width: 400px;
-    margin: 0 auto;
     display: grid;
     place-items: center;
     height: 100vh;
     width: 100%;
+    background: linear-gradient(
+        0.25turn,
+        var(--osrs-color-background-30),
+        var(--rs3-color-background-30)
+    );
 `
 
 const Wrapper = styled.div`
-
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
 `
 
 const Title = styled.h1`
@@ -20,57 +31,31 @@ const Title = styled.h1`
     font-family: 'Cinzel', serif;
     margin: 0 0 1rem;
     text-align: left;
+    color: var(--rs3-color-text-50);
 `
 
 const Deck = styled.nav``
-
-const Card = styled.a`
-    display: block;
-    box-sizing: border-box;
-    background-color: var(--color-background-70);
-    padding: 0.5rem 1rem;
-    color: white;
-    text-decoration: none;
-    border-width: 1px;
-    border-style: solid;
-    border-bottom-color: var(--color-utility-0);
-    border-right-color: var(--color-utility-0);
-    border-left-color: var(--color-utility-60);
-    border-top-color: var(--color-utility-60);
-    position: relative;
-
-    ${Descriptor.Wrapper} {
-        gap: 1rem;
-        justify-content: flex-start;
-    }
-
-    ${Descriptor.Text} {
-        font-size: 1.2rem;
-        font-weight: 700;
-        font-family: 'Cinzel', serif;
-        color: var(--color-text-50);
-    }
-`
 
 const IndexRoute = () => {
     return (
         <Container>
             <Wrapper>
                 <Title>Rune Tools</Title>
-                <p>I know the Index page sucks, I'm working on it</p>
+                <p style={{ color: '#ffffff' }}>I know the Index page sucks, I'm working on it</p>
                 <Deck>
-                    <Card href={'osrs/flow'}>
-                        <Descriptor
-                            icon={'/rs3/menu-items/powers_icon.webp'}
-                            text={'Flow Calculator'}
-                        />
-                    </Card>
-                    <Card href={'rs3/action-bar/'}>
-                        <Descriptor
-                            icon={'/rs3/menu-items/powers_icon.webp'}
-                            text={'Action Bar Planner'}
-                        />
-                    </Card>
+                    <LinkButton
+                        $style={'osrs'}
+                        $background={'dark'}
+                        href='osrs/preset'
+                        text={'Preset'}
+                        icon={'/rs3/menu-items/powers_icon.webp'}
+                    />
+                    <LinkButton
+                        $style={'rs3'}
+                        href='rs3/action-bar/'
+                        text={'Action Bar Planner'}
+                        icon={'/rs3/menu-items/powers_icon.webp'}
+                    />
                 </Deck>
             </Wrapper>
         </Container>

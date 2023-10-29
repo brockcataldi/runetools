@@ -18,6 +18,7 @@ import RS3Route from './routes/RS3/RS3Route.tsx'
 import ActionBarRoute from './routes/RS3/ActionBarRoute/ActionBarRoute.tsx'
 
 import GlobalStyle from './components/GlobalStyle.tsx'
+import PresetRoute from './routes/OSRS/PresetRoute/PresetRoute.tsx'
 
 const router = createBrowserRouter([
     {
@@ -35,7 +36,11 @@ const router = createBrowserRouter([
             },
             {
                 path: 'osrs/flow',
-                element: <FlowRoute />
+                element: <FlowRoute />,
+            },
+            {
+                path: 'osrs/preset',
+                element: <PresetRoute />,
             },
             {
                 path: 'rs3',

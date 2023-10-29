@@ -22,11 +22,11 @@ const Checkmark = styled.span`
     display: grid;
     height: 18px;
     width: 18px;
-    background-color: var(--color-background-30);
+    background-color: var(--rs3-color-background-30);
     position: relative;
     place-items: center;
     cursor: pointer;
-    border: 2px solid var(--color-utility-60);
+    border: 2px solid var(--rs3-color-utility-60);
 
     ${Input}:checked + &:after {
         display: block;
@@ -36,7 +36,7 @@ const Checkmark = styled.span`
         content: '';
         width: 5px;
         height: 10px;
-        border: solid var(--color-text-50);
+        border: solid var(--rs3-color-text-50);
         border-width: 0 3px 3px 0;
         -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);

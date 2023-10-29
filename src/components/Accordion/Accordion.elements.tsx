@@ -13,14 +13,14 @@ const Trigger = styled.button`
     margin: 0;
     padding: 1rem 1.5rem;
     position: relative;
-    background-color: var(--color-background-70);
+    background-color: var(--rs3-color-background-70);
     cursor: pointer;
     border-width: 1px;
     border-style: solid;
-    border-bottom-color: var(--color-utility-0);
-    border-right-color: var(--color-utility-0);
-    border-left-color: var(--color-utility-60);
-    border-top-color: var(--color-utility-60);
+    border-bottom-color: var(--rs3-color-utility-0);
+    border-right-color: var(--rs3-color-utility-0);
+    border-left-color: var(--rs3-color-utility-60);
+    border-top-color: var(--rs3-color-utility-60);
 `
 
 const Descriptor = styled.span`
@@ -34,18 +34,18 @@ const Icon = styled.img`
     width: 1.5rem;
     height: 1.5rem;
     object-fit: contain;
-    border: 1px solid var(--color-utility-60);
+    border: 1px solid var(--rs3-color-utility-60);
 `
 
 const Title = styled.span`
     font-size: 1.2rem;
     font-weight: 700;
     font-family: 'Cinzel', serif;
-    color: var(--color-text-50);
+    color: var(--rs3-color-text-50);
 `
 
 const Chevron = styled.span`
-    border: solid var(--color-text-50);
+    border: solid var(--rs3-color-text-50);
     border-width: 0 2px 2px 0;
     height: 0.5rem;
     pointer-events: none;

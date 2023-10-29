@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useRecoilValue } from 'recoil'
 
-import Aside from './components/Aside/Aside'
+import AbilityAside from './components/AbilityAside/AbilityAside'
 import ActionBar from './components/ActionBar/ActionBar'
 import Header from '../../../components/Header/Header'
 import Button from '../../../components/Button/Button'
@@ -24,7 +24,7 @@ const Main = styled.main`
     left: 0;
     right: 20.5rem;
     bottom: 0;
-    background-color: var(--color-background-30);
+    background-color: var(--rs3-color-background-30);
     z-index: 0;
     display: grid;
     place-items: center;
@@ -63,18 +63,20 @@ const ActionBarRoute = () => {
 
     return (
         <Container>
-            <Header>
+            <Header $style={'rs3'}>
                 <Button
                     icon={ShareIcon}
                     text={'Share'}
                     onClick={onClickShare}
                     $background={'light'}
+                    $style={'rs3'}
                 />
                 <Button
                     icon={SettingsIcon}
                     text={'Settings'}
                     onClick={onClickShare}
                     $background={'light'}
+                    $style={'rs3'}
                 />
             </Header>
             <Main>
@@ -90,11 +92,16 @@ const ActionBarRoute = () => {
                         />
                     ))}
                     {bars.length < 5 ? (
-                        <Button icon={PlusIcon} text={'Add Another'} onClick={onClickAdd} />
+                        <Button
+                            icon={PlusIcon}
+                            text={'Add Another'}
+                            onClick={onClickAdd}
+                            $style={'rs3'}
+                        />
                     ) : null}
                 </Wrapper>
             </Main>
-            <Aside setSlots={setBars} slotsRef={barsRef} />
+            <AbilityAside setSlots={setBars} slotsRef={barsRef} />
         </Container>
     )
 }
